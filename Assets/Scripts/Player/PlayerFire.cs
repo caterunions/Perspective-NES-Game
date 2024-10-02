@@ -5,9 +5,6 @@ using UnityEngine;
 public class PlayerFire : MonoBehaviour
 {
     [SerializeField]
-    private SpellInventoryData _spellInventoryData;
-
-    [SerializeField]
     private BulletLauncher _launcher;
 
     private bool _firing;
@@ -15,9 +12,11 @@ public class PlayerFire : MonoBehaviour
 
     private Coroutine _fireRoutine = null;
 
+    private Spell _curSpell;
+
     public void StartFiring()
     {
-        if (_spellInventoryData.MainAttackSpell == null) return;
+        if (_curSpell == null) return;
 
         _firing = true;
         if(_fireRoutine == null)
@@ -31,11 +30,17 @@ public class PlayerFire : MonoBehaviour
         _firing = false;
     }
 
+    public void ChangeMainAttackSpell(Spell spell)
+    {
+        _curSpell = spell;
+        StopFiring();
+    }
+
     private IEnumerator FireRoutine()
     {
         while (_firing)
         {
-            Attack attack = _spellInventoryData.MainAttackSpell.BasicAttack;
+            Attack attack = _curSpell.BasicAttack;
 
             int curCount = attack.Count;
             float curSpread = attack.Spread;

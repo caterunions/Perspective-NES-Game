@@ -27,5 +27,11 @@ MonoBehaviour:
     _startAtFixedAngle: 0
     _fixedAngle: 0
     _randomAngleOffset: 0
-  a: 1
-  b: 1
+  _manaCost: 20
+  _cooldown: 2
+  _canBeHeldDown: 0
+  _manaDrain: 0
+  _spellStartEffects:
+  - {fileID: 11400000, guid: a85ef2103b30f5e488460b9ff246c929, type: 2}
+  _spellSustainEffects: []
+  _spellEndEffects: []

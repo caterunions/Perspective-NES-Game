@@ -8,6 +8,7 @@ public class SpellInventoryData : ScriptableObject
 {
     public event Action<SpellInventoryData, Spell> OnMainAttackChanged;
     public event Action<SpellInventoryData, Spell[]> OnCastingSpellsChanged;
+    public event Action<SpellInventoryData> OnSpellSelectionChange;
 
     [SerializeField]
     private Spell _mainAttackSpell;
@@ -16,6 +17,22 @@ public class SpellInventoryData : ScriptableObject
     [SerializeField]
     private Spell[] _castingSpells = new Spell[5];
     public Spell[] CastingSpells => _castingSpells;
+
+    private int _selectedCastingSpellIndex = 0;
+    public int SelectedCastingSpellIndex
+    {
+        get { return _selectedCastingSpellIndex; }
+        set 
+        {
+            _selectedCastingSpellIndex = value;
+            OnSpellSelectionChange?.Invoke(this);
+        }
+    }
+
+    public Spell SelectedCastingSpell
+    {
+        get { return _castingSpells[_selectedCastingSpellIndex]; }
+    }
 
     public void SetMainAttackSpell(Spell spell)
     {

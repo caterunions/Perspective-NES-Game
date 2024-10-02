@@ -12,6 +12,9 @@ public class SpellDisplay : MonoBehaviour
     private Image[] _spellIcons = new Image[6];
 
     [SerializeField]
+    private Image _spellSelection;
+
+    [SerializeField]
     private Sprite _emptySprite;
 
     private void OnEnable()

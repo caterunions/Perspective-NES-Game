@@ -18,6 +18,9 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerFire _playerFire;
 
     [SerializeField]
+    private CastingHandler _castingHandler;
+
+    [SerializeField]
     private Camera _camera;
 
     private void OnEnable()
@@ -31,6 +34,9 @@ public class PlayerInputHandler : MonoBehaviour
 
         _playerInput.actions.FindAction("Fire").performed += BeginFire;
         _playerInput.actions.FindAction("Fire").canceled += StopFire;
+
+        _playerInput.actions.FindAction("Cast").performed += StartCast;
+        _playerInput.actions.FindAction("Cast").canceled += StopCast;
     }
 
     private void OnDisable()
@@ -42,6 +48,9 @@ public class PlayerInputHandler : MonoBehaviour
 
         _playerInput.actions.FindAction("Fire").performed -= BeginFire;
         _playerInput.actions.FindAction("Fire").canceled -= StopFire;
+
+        _playerInput.actions.FindAction("Cast").performed -= StartCast;
+        _playerInput.actions.FindAction("Cast").canceled -= StopCast;
     }
 
     private void HandleMove(InputAction.CallbackContext ctx)
@@ -67,5 +76,15 @@ public class PlayerInputHandler : MonoBehaviour
     private void StopFire(InputAction.CallbackContext ctx)
     {
         _playerFire.StopFiring();
+    }
+
+    private void StartCast(InputAction.CallbackContext ctx)
+    {
+        _castingHandler.StartCast();
+    }
+
+    private void StopCast(InputAction.CallbackContext ctx)
+    {
+        _castingHandler.StopCast();
     }
 }

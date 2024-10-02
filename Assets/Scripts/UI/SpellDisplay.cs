@@ -23,8 +23,6 @@ public class SpellDisplay : MonoBehaviour
         HandleCastingSpellsChange(_spellInventoryData, new Spell[_spellInventoryData.Spells.Length]);
 
         _spellInventoryData.OnSpellSelectionChange += HandleSpellSelectionChange;
-        HandleSpellSelectionChange(_spellInventoryData);
-        _spellSelection.gameObject.SetActive(true);
     }
 
     private void OnDisable()

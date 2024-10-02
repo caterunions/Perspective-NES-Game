@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
@@ -33,7 +34,15 @@ public class PlayerFire : MonoBehaviour
     public void ChangeSpell(Spell spell)
     {
         _curSpell = spell;
-        StopFiring();
+        if(_firing)
+        {
+            StopFiring();
+            StartFiring();
+        }
+        else
+        {
+            StopFiring();
+        }
     }
 
     private IEnumerator FireRoutine()

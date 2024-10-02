@@ -6,46 +6,34 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SpellInventory", menuName = "Scriptable Objects/SpellInventory")]
 public class SpellInventoryData : ScriptableObject
 {
-    public event Action<SpellInventoryData, Spell> OnMainAttackChanged;
-    public event Action<SpellInventoryData, Spell[]> OnCastingSpellsChanged;
+    public event Action<SpellInventoryData, Spell[]> OnSpellsChanged;
     public event Action<SpellInventoryData> OnSpellSelectionChange;
 
     [SerializeField]
-    private Spell _mainAttackSpell;
-    public Spell MainAttackSpell => _mainAttackSpell;
+    private Spell[] _spells = new Spell[5];
+    public Spell[] Spells => _spells;
 
-    [SerializeField]
-    private Spell[] _castingSpells = new Spell[5];
-    public Spell[] CastingSpells => _castingSpells;
-
-    private int _selectedCastingSpellIndex = 0;
-    public int SelectedCastingSpellIndex
+    private int _selectedSpellIndex = 0;
+    public int SelectedSpellIndex
     {
-        get { return _selectedCastingSpellIndex; }
+        get { return _selectedSpellIndex; }
         set 
         {
-            _selectedCastingSpellIndex = value;
+            _selectedSpellIndex = value;
             OnSpellSelectionChange?.Invoke(this);
         }
     }
 
-    public Spell SelectedCastingSpell
+    public Spell SelectedSpell
     {
-        get { return _castingSpells[_selectedCastingSpellIndex]; }
-    }
-
-    public void SetMainAttackSpell(Spell spell)
-    {
-        Spell old = _mainAttackSpell;
-        _mainAttackSpell = spell;
-        OnMainAttackChanged?.Invoke(this, old);
+        get { return _spells[_selectedSpellIndex]; }
     }
 
     public void SetCastingSpellSlot(int index, Spell spell)
     {
-        Spell[] old = new Spell[_castingSpells.Length];
-        Array.Copy(_castingSpells, old, _castingSpells.Length);
-        _castingSpells[index] = spell;
-        OnCastingSpellsChanged?.Invoke(this, old);
+        Spell[] old = new Spell[_spells.Length];
+        Array.Copy(_spells, old, _spells.Length);
+        _spells[index] = spell;
+        OnSpellsChanged?.Invoke(this, old);
     }
 }

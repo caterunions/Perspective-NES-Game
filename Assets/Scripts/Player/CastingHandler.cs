@@ -45,7 +45,8 @@ public class CastingHandler : MonoBehaviour
                 susEffect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher);
                 susEffect.Activate();
             }
-        }
+        } 
+        else StopCast();
     }
 
     public void StopCast()

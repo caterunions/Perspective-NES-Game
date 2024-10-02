@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27f089d4295c6474e8f69ec1bcad68ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 6152602499993257223}
   - component: {fileID: 6250291662434237995}
   - component: {fileID: 1091297292591825541}
+  - component: {fileID: 3031510013180147715}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -291,6 +292,7 @@ MonoBehaviour:
   _playerAim: {fileID: 8678558187682601123}
   _playerFire: {fileID: 7958128949992578416}
   _castingHandler: {fileID: 1091297292591825541}
+  _spellSelection: {fileID: 3031510013180147715}
   _camera: {fileID: 0}
 --- !u!114 &3141246819926546183
 MonoBehaviour:
@@ -389,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d24a1069378da479fa8d5811723179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _castingHandler: {fileID: 1091297292591825541}
 --- !u!114 &6250291662434237995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,3 +422,17 @@ MonoBehaviour:
   _bulletLauncher: {fileID: 901349486428560866}
   _stats: {fileID: 1106804689393191833}
   _player: {fileID: 7002353487323383801}
+--- !u!114 &3031510013180147715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002353487323383801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d59b0d5625ea44d914978d173ea862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spellInventoryData: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
+  _castingHandler: {fileID: 1091297292591825541}

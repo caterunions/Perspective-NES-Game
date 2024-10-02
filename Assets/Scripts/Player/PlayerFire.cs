@@ -30,7 +30,7 @@ public class PlayerFire : MonoBehaviour
         _firing = false;
     }
 
-    public void ChangeMainAttackSpell(Spell spell)
+    public void ChangeSpell(Spell spell)
     {
         _curSpell = spell;
         StopFiring();

@@ -14,9 +14,12 @@ public class ManaController : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private CastingHandler _castingHandler;
+
     private void Update()
     {
-        if(stats.CurrentMana < stats.MaxMana)
+        if(!_castingHandler.CastingSpell && stats.CurrentMana < stats.MaxMana)
         {
             stats.GainMana(stats.ManaRegen * Time.deltaTime);
         }

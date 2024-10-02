@@ -21,6 +21,9 @@ public class PlayerInputHandler : MonoBehaviour
     private CastingHandler _castingHandler;
 
     [SerializeField]
+    private SpellSelection _spellSelection;
+
+    [SerializeField]
     private Camera _camera;
 
     private void OnEnable()
@@ -37,6 +40,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         _playerInput.actions.FindAction("Cast").performed += StartCast;
         _playerInput.actions.FindAction("Cast").canceled += StopCast;
+
+        _playerInput.actions.FindAction("Scroll").performed += HandleScroll;
     }
 
     private void OnDisable()
@@ -51,6 +56,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         _playerInput.actions.FindAction("Cast").performed -= StartCast;
         _playerInput.actions.FindAction("Cast").canceled -= StopCast;
+
+        _playerInput.actions.FindAction("Scroll").performed += HandleScroll;
     }
 
     private void HandleMove(InputAction.CallbackContext ctx)
@@ -86,5 +93,10 @@ public class PlayerInputHandler : MonoBehaviour
     private void StopCast(InputAction.CallbackContext ctx)
     {
         _castingHandler.StopCast();
+    }
+
+    private void HandleScroll(InputAction.CallbackContext ctx)
+    {
+        _spellSelection.HandleScroll(ctx.ReadValue<Vector2>().y);
     }
 }

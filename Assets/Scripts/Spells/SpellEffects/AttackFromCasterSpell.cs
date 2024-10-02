@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Attack From Player", menuName = "Scriptable Objects/Spell Effects/Attack From Player")]
+[CreateAssetMenu(fileName = "Attack From Caster", menuName = "Scriptable Objects/Spell Effects/Attack From Caster")]
 public class AttackFromCasterSpell : SpellEffect
 {
     [SerializeField]
     private Attack _attack;
 
+    private Coroutine _attackRoutine;
+
     public override void Activate()
     {
-        CoroutineHelper.Instance.StartCoroutine(AttackRoutine());
+        _attackRoutine = CoroutineHelper.Instance.StartCoroutine(AttackRoutine());
     }
 
     private IEnumerator AttackRoutine()
@@ -29,5 +31,7 @@ public class AttackFromCasterSpell : SpellEffect
 
             yield return new WaitForSeconds(_attack.RepeatDelay);
         }
+
+        _attackRoutine = null;
     }
 }

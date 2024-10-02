@@ -9,54 +9,46 @@ public class SpellDisplay : MonoBehaviour
     private SpellInventoryData _spellInventoryData;
 
     [SerializeField]
-    private Image[] _spellIcons = new Image[6];
+    private Image[] _spellIcons = new Image[5];
 
     [SerializeField]
-    private Image _spellSelection;
+    private RectTransform _spellSelection;
 
     [SerializeField]
     private Sprite _emptySprite;
 
     private void OnEnable()
     {
-        _spellInventoryData.OnMainAttackChanged += HandleMainAttackChange;
-        HandleMainAttackChange(_spellInventoryData, null);
+        _spellInventoryData.OnSpellsChanged += HandleCastingSpellsChange;
+        HandleCastingSpellsChange(_spellInventoryData, new Spell[_spellInventoryData.Spells.Length]);
 
-        _spellInventoryData.OnCastingSpellsChanged += HandleCastingSpellsChange;
-        HandleCastingSpellsChange(_spellInventoryData, new Spell[_spellInventoryData.CastingSpells.Length]);
+        _spellInventoryData.OnSpellSelectionChange += HandleSpellSelectionChange;
+        HandleSpellSelectionChange(_spellInventoryData);
+        _spellSelection.gameObject.SetActive(true);
     }
 
     private void OnDisable()
     {
-        _spellInventoryData.OnMainAttackChanged -= HandleMainAttackChange;
-
-        _spellInventoryData.OnCastingSpellsChanged -= HandleCastingSpellsChange;
-    }
-
-    private void HandleMainAttackChange(SpellInventoryData spellData, Spell oldSpell)
-    {
-        if(_spellInventoryData.MainAttackSpell != null)
-        {
-            _spellIcons[0].sprite = _spellInventoryData.MainAttackSpell.Icon;
-        }
-        else
-        {
-            _spellIcons[0].sprite = _emptySprite;
-        }
+        _spellInventoryData.OnSpellsChanged -= HandleCastingSpellsChange;
     }
 
     private void HandleCastingSpellsChange(SpellInventoryData spellData, Spell[] oldCastingSpells)
     {
-        for(int i = 0; i < _spellInventoryData.CastingSpells.Length; i++)
+        for(int i = 0; i < _spellInventoryData.Spells.Length; i++)
         {
-            if(_spellInventoryData.CastingSpells[i] != null)
+            if(_spellInventoryData.Spells[i] != null)
             {
-                _spellIcons[i + 1].sprite = _spellInventoryData.CastingSpells[i].Icon;
+                _spellIcons[i].sprite = _spellInventoryData.Spells[i].Icon;
             }
             else
             {
-                _spellIcons[i + 1].sprite = _emptySprite;
+                _spellIcons[i].sprite = _emptySprite;
             }
         }
+    }
+
+    private void HandleSpellSelectionChange(SpellInventoryData spellData)
+    {
+        _spellSelection.transform.position = _spellIcons[_spellInventoryData.SelectedSpellIndex].transform.position;
     }
 }

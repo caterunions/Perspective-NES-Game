@@ -21,6 +21,10 @@ public class CastingHandler : MonoBehaviour
     public bool CastingSpell => _castingSpell;
 
     private float _curSpellCooldown = 0f;
+    public float CurSpellCooldown => _curSpellCooldown;
+
+    private float _maxSpellCooldown = 0f;
+    public float MaxSpellCooldown => _maxSpellCooldown;
 
     public void StartCast()
     {
@@ -30,6 +34,8 @@ public class CastingHandler : MonoBehaviour
         if (_stats.CurrentMana < _curSpell.ManaCost) return;
 
         _castingSpell = true;
+        _curSpellCooldown = _curSpell.Cooldown;
+        _maxSpellCooldown = _curSpell.Cooldown;
         _stats.LoseMana(_curSpell.ManaCost);
 
         foreach(SpellEffect effect in _curSpell.SpellStartEffects)
@@ -55,7 +61,6 @@ public class CastingHandler : MonoBehaviour
         if (!_castingSpell) return;
 
         _castingSpell = false;
-        _curSpellCooldown = _curSpell.Cooldown;
 
         if(_curSpell.CanBeHeldDown)
         {
@@ -79,7 +84,7 @@ public class CastingHandler : MonoBehaviour
 
     private void Update()
     {
-        if(_curSpellCooldown > 0)
+        if(!_castingSpell && _curSpellCooldown > 0)
         {
             _curSpellCooldown -= Time.deltaTime;
             if (_curSpellCooldown < 0) _curSpellCooldown = 0;

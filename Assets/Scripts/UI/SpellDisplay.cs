@@ -9,7 +9,7 @@ public class SpellDisplay : MonoBehaviour
     private SpellInventoryData _spellInventoryData;
 
     [SerializeField]
-    private Image[] _spellIcons = new Image[5];
+    private SpellIcon[] _spellIcons = new SpellIcon[5];
 
     [SerializeField]
     private RectTransform _spellSelection;
@@ -38,11 +38,11 @@ public class SpellDisplay : MonoBehaviour
         {
             if(_spellInventoryData.Spells[i] != null)
             {
-                _spellIcons[i].sprite = _spellInventoryData.Spells[i].Icon;
+                _spellIcons[i].SetIcon(_spellInventoryData.Spells[i].Icon);
             }
             else
             {
-                _spellIcons[i].sprite = _emptySprite;
+                _spellIcons[i].SetIcon(_emptySprite);
             }
         }
     }

@@ -28,7 +28,7 @@ MonoBehaviour:
     _fixedAngle: 0
     _randomAngleOffset: 0
   _manaCost: 5
-  _cooldown: 2
+  _cooldown: 1
   _canBeHeldDown: 1
   _manaDrain: 3
   _spellStartEffects: []

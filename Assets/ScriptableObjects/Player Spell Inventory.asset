@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98bff168b913f34a865e364b528537f, type: 3}
   m_Name: Player Spell Inventory
   m_EditorClassIdentifier: 
-  _mainAttackSpell: {fileID: 0}
+  _mainAttackSpell: {fileID: 11400000, guid: 15756a81729cc5e43b2db025eb6f89a5, type: 2}
   CastingSpells:
   - {fileID: 0}
   - {fileID: 0}

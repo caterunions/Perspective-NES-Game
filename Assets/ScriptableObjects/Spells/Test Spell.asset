@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 0}
   _basicAttack:
-    _bullet: {fileID: 0}
-    _count: 0
+    _bullet: {fileID: 7163168430147903806, guid: 5526775fc74b83b49be58a2a189432bd, type: 3}
+    _count: 1
     _countModifier: 0
     _spread: 0
     _spreadModifier: 0
@@ -23,7 +23,9 @@ MonoBehaviour:
     _angleOffsetIncrease: 0
     _repetitions: 1
     _repeatDelay: 0
-    _endDelay: 0
+    _endDelay: 0.5
     _startAtFixedAngle: 0
     _fixedAngle: 0
     _randomAngleOffset: 0
+  a: 1
+  b: 1

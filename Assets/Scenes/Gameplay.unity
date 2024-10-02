@@ -122,37 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &90650584
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 90650585}
-  m_Layer: 0
-  m_Name: SpellInventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &90650585
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90650584}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1430154469}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &171705127
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +312,9 @@ GameObject:
   - component: {fileID: 1430154474}
   - component: {fileID: 1430154473}
   - component: {fileID: 1430154472}
+  - component: {fileID: 1430154477}
+  - component: {fileID: 1430154476}
+  - component: {fileID: 1430154475}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -365,7 +337,6 @@ Transform:
   m_Children:
   - {fileID: 1507140901}
   - {fileID: 171705128}
-  - {fileID: 90650585}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1430154470
@@ -499,7 +470,50 @@ MonoBehaviour:
   _playerInput: {fileID: 1430154470}
   _playerMove: {fileID: 1430154473}
   _playerAim: {fileID: 1507140902}
+  _playerFire: {fileID: 1507140904}
   _camera: {fileID: 519420031}
+--- !u!114 &1430154475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430154467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ac3185f36876a4b93b826dbb15fcaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+--- !u!114 &1430154476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430154467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56ae266cffeded42a4bada7c45cc071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 1430154475}
+--- !u!114 &1430154477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430154467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501bb2dd03bf4ec4baa5d557af2bdcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _team: 1
+  _stats: {fileID: 1430154475}
+  _healthPools:
+  - {fileID: 1430154476}
 --- !u!1 &1507140900
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +525,7 @@ GameObject:
   - component: {fileID: 1507140901}
   - component: {fileID: 1507140902}
   - component: {fileID: 1507140903}
+  - component: {fileID: 1507140904}
   m_Layer: 0
   m_Name: Aimer
   m_TagString: Untagged
@@ -557,6 +572,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5ca65d5032fa5488c37949e23ac26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1507140904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507140900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66848dc984987714e8912f299b4b3169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spellInventoryData: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
+  _launcher: {fileID: 1507140903}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

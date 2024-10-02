@@ -16,6 +16,8 @@ public class Spell : ScriptableObject
     public Attack BasicAttack => _basicAttack;
 
     [Header("As mana-costing spell")]
+    public bool a;
 
     [Header("As tower ability")]
+    public bool b;
 }

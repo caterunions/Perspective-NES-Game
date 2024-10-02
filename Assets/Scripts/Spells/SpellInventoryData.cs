@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SpellInventory", menuName = "Scriptable Objects/SpellInventory")]
-public class SpellInventory : ScriptableObject
+public class SpellInventoryData : ScriptableObject
 {
     [SerializeField]
     private Spell _mainAttackSpell;

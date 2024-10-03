@@ -16,9 +16,6 @@ public class EnemyBrain : MonoBehaviour
     }
 
     [SerializeField]
-    private EnemyAction _startAction;
-
-    [SerializeField]
     private List<EnemyAction> _actions;
 
     [SerializeField]
@@ -26,40 +23,49 @@ public class EnemyBrain : MonoBehaviour
 
     [SerializeField]
     private EnemyAim _aimer;
-    public EnemyAim Aimer => _aimer;
+
+    [SerializeField]
+    private EnemyMove _mover;
 
     private EnemyAction _curAction;
     private int _actionIndex = 0;
 
+    public bool Acting
+    {
+        get { return _curAction.InProgress; }
+    }
+
+    private bool _canAct
+    {
+        get { return _mover.WithinRange; }
+    }
+
     public void LockAimer()
     {
-        Aimer.Locked = true;
+        _aimer.Locked = true;
     }
 
     public void UnlockAimer()
     {
-        Aimer.Locked = false;
+        _aimer.Locked = false;
     }
 
     public void SetPlayer(GameObject player)
     {
         _player = player;
 
-        Aimer.Player = _player.transform;
+        _aimer.Player = _player.transform;
+        _mover.Player = _player.transform;
     }
 
     private void OnEnable()
     {
         // remove when spawner logic is added
-        Aimer.Player = _player.transform;
+        _aimer.Player = _player.transform;
+        _mover.Player = _player.transform;
 
         _actionIndex = 0;
-        if (_startAction != null)
-        {
-            _curAction = _startAction;
-            _curAction.Act();
-        }
-        else _curAction = _actions[_actionIndex];
+        _curAction = _actions[_actionIndex];
     }
 
     private void OnDisable()
@@ -69,7 +75,7 @@ public class EnemyBrain : MonoBehaviour
 
     private void Update()
     {
-        if (_curAction.InProgress == false)
+        if (_curAction.InProgress == false && _canAct)
         {
             if (_curAction != _actions[_actionIndex] && !_actions[_actionIndex].InProgress)
             {

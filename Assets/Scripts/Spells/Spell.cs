@@ -12,6 +12,10 @@ public class Spell : ScriptableObject
     private Sprite _icon;
     public Sprite Icon => _icon;
 
+    [SerializeField]
+    private DamageTypes[] _associatedTypes;
+    public DamageTypes[] AssociatedTypes => _associatedTypes;
+
     [Header("As basic attack")]
 
     [SerializeField]

@@ -47,6 +47,35 @@ public class SpawnDamageNumbersOnHit : MonoBehaviour
 
         DamageNumber dmgNum = Instantiate(_damageNumberObj, spawnPos, Quaternion.identity);
 
-        dmgNum.Text.text = $"<color=#FF0000>-{Mathf.CeilToInt(dmgEvent.Damage)}";
+        Color textColor = dmgNum.DefaultColor;
+
+        Bullet bullet = dmgEvent.SpecificSource.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            switch (bullet.DamageType)
+            {
+                case DamageTypes.Arcane:
+                    textColor = dmgNum.ArcaneColor;
+                    break;
+                case DamageTypes.Fire:
+                    textColor = dmgNum.FireColor;
+                    break;
+                case DamageTypes.Ice:
+                    textColor = dmgNum.IceColor;
+                    break;
+                case DamageTypes.Electric:
+                    textColor = dmgNum.ElectricColor;
+                    break;
+                case DamageTypes.Poison:
+                    textColor = dmgNum.PoisonColor;
+                    break;
+                case DamageTypes.Blood:
+                    textColor = dmgNum.BloodColor;
+                    break;
+            }
+        }
+
+        dmgNum.Text.color = textColor;
+        dmgNum.Text.text = $"-{Mathf.CeilToInt(dmgEvent.Damage)}";
     }
 }

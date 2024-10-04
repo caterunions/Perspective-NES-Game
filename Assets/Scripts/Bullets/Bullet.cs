@@ -31,6 +31,10 @@ public class Bullet : MonoBehaviour
     private float _damage = 0;
     public float Damage => _damage;
 
+    [SerializeField]
+    private DamageTypes _damageType;
+    public DamageTypes DamageType => _damageType;
+
     public float DistanceTravelled
     {
         get

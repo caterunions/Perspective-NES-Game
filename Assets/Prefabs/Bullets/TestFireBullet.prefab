@@ -129,6 +129,7 @@ MonoBehaviour:
   _collider: {fileID: 826484786587837382}
   _destroyOnWalls: 1
   _damage: 1
+  _damageType: 2
 --- !u!114 &8714254849276479317
 MonoBehaviour:
   m_ObjectHideFlags: 0

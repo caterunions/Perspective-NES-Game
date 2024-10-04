@@ -10,6 +10,11 @@ public class SpellSelection : MonoBehaviour
     [SerializeField]
     private CastingHandler _castingHandler;
 
+    private void OnEnable()
+    {
+        _spellInventoryData.SelectedSpellIndex = 0;
+    }
+
     public void HandleScroll(float scroll)
     {
         if (_castingHandler.CastingSpell) return;

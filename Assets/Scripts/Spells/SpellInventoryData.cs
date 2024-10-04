@@ -36,4 +36,6 @@ public class SpellInventoryData : ScriptableObject
         _spells[index] = spell;
         OnSpellsChanged?.Invoke(this, old);
     }
+
+
 }

@@ -52,11 +52,12 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (EnemyBrain.Acting) return;
 
         Vector2? moveDir = null;
+
         if(_distToPlayer < _minAcceptableDistance)
         {
             moveDir = _player.position - transform.position;

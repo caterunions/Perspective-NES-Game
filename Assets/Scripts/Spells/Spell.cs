@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Akaal;
+using Akaal.PvCustomizer.Scripts;
 
 [CreateAssetMenu(fileName = "Spell", menuName = "Scriptable Objects/Spell")]
 public class Spell : ScriptableObject
 {
     [SerializeField]
+    [PvIcon]
     private Sprite _icon;
     public Sprite Icon => _icon;
 

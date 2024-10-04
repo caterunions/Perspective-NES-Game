@@ -9,21 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b71754e8c81214882af7262c2af4c0, type: 3}
-  m_Name: Attack From Caster Sustain
+  m_Script: {fileID: 11500000, guid: 4a41884c3122f624aade1e5ba4c87440, type: 3}
+  m_Name: Test Spell Attack From Caster
   m_EditorClassIdentifier: 
-  _repeatDelay: 0
   _attack:
-    _bullet: {fileID: 7163168430147903806, guid: 34fe467e47232d543b43be9be1683a18, type: 3}
-    _count: 3
+    _bullet: {fileID: 7163168430147903806, guid: 5526775fc74b83b49be58a2a189432bd, type: 3}
+    _count: 16
     _countModifier: 0
-    _spread: 30
+    _spread: 360
     _spreadModifier: 0
     _angleOffsetStart: 0
     _angleOffsetIncrease: 0
     _repetitions: 1
-    _repeatDelay: 0.1
+    _repeatDelay: 0
     _endDelay: 0
-    _startAtFixedAngle: 0
+    _startAtFixedAngle: 1
     _fixedAngle: 0
     _randomAngleOffset: 0

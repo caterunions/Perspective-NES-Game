@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.akaal.pvcustomizer": {
+      "version": "https://github.com/h-sigma/PvCustomizer.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3a1bbc47aa7bb50b051b3ff6fdecc584c05f45c3"
+    },
     "com.unity.2d.animation": {
       "version": "9.1.1",
       "depth": 1,

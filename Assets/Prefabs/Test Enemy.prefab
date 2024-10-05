@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minAcceptableDistance: 5
   _maxAcceptableDistance: 7
-  _moveSpeed: 2
+  _stats: {fileID: 8647825259397098311}
   _rb: {fileID: 4101325117751298239}
 --- !u!114 &989103372972544303
 MonoBehaviour:
@@ -211,6 +211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _regen: 0
+  _armor: 0
+  _moveSpeed: 3
 --- !u!58 &5267110317207457854
 CircleCollider2D:
   m_ObjectHideFlags: 0

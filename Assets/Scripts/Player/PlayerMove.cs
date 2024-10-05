@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _rb;
     [SerializeField]
-    private float _moveSpeed = 5f;
+    private PlayerStats _stats;
 
     private Vector2 _lastMoveInput;
 
@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        _rb.velocity = _lastMoveInput * _moveSpeed;
+        _rb.velocity = _lastMoveInput * _stats.MoveSpeed;
     }
 
     private void OnDisable()

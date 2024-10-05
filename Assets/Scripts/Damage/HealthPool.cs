@@ -61,4 +61,9 @@ public class HealthPool : MonoBehaviour
 
         return heal;
     }
+
+    private void Update()
+    {
+        Heal(_stats.Regen * Time.deltaTime);
+    }
 }

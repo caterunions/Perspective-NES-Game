@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 5540555386058792979}
-  _moveSpeed: 6
+  _stats: {fileID: 1106804689393191833}
 --- !u!50 &5540555386058792979
 Rigidbody2D:
   serializedVersion: 4
@@ -332,7 +332,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _regen: 0
+  _regen: 1
+  _armor: 0
+  _moveSpeed: 5
   _maxMana: 100
   _manaRegen: 5
 --- !u!114 &6152602499993257223

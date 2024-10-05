@@ -11,7 +11,7 @@ public class EnemyMove : MonoBehaviour
     private float _maxAcceptableDistance = 10f;
 
     [SerializeField]
-    private float _moveSpeed = 1f;
+    private EntityStats _stats;
 
     [SerializeField]
     private Rigidbody2D _rb;
@@ -74,7 +74,7 @@ public class EnemyMove : MonoBehaviour
         }
         else
         {
-            _rb.velocity = moveDir.Value.normalized * _moveSpeed;
+            _rb.velocity = moveDir.Value.normalized * _stats.MoveSpeed;
         }
     }
 }

@@ -6,9 +6,10 @@ using UnityEngine;
 public class BulletLauncher : MonoBehaviour
 {
     public event Action<BulletLauncher, Bullet, DamageReceiver, DamageEvent> OnSpawnedBulletHit;
-    public event Action<BulletLauncher, PatternData> OnLaunch;
+    public event Action<BulletLauncher, Bullet, PatternData> OnBulletLaunch;
+    public event Action<BulletLauncher, PatternData, float> OnPatternLaunch;
 
-    public void Launch(PatternData pattern)
+    public void Launch(PatternData pattern, float damageMultiplier)
     {
         float angleStep = pattern.Spread / pattern.Count;
         float aimAngle = pattern.FixedAngle == null ? transform.rotation.eulerAngles.z + pattern.AngleOffset : (float)pattern.FixedAngle + pattern.AngleOffset;
@@ -28,10 +29,10 @@ public class BulletLauncher : MonoBehaviour
             Bullet b = Instantiate(pattern.Bullet, position, rotation);
 
             b.OnHit += TriggerSpawnedHitEvent;
-            b.Initialize(transform.root.gameObject, this, pattern.Team);
+            b.Initialize(transform.root.gameObject, this, pattern.Team, pattern.CameFromEffect, pattern.PreviousEffectsInChain, damageMultiplier);
+            OnBulletLaunch?.Invoke(this, b, pattern);
         }
-
-        OnLaunch?.Invoke(this, pattern);
+        OnPatternLaunch?.Invoke(this, pattern, damageMultiplier);
     }
 
     private void TriggerSpawnedHitEvent(Bullet bullet, DamageReceiver dr, DamageEvent dmgEvent)
@@ -42,7 +43,7 @@ public class BulletLauncher : MonoBehaviour
 
 public class PatternData
 {
-    public PatternData(Bullet bullet, int count, float spread, float angleOffset, float randomAngleOffset, DamageTeam team, Vector2? position, float? fixedAngle)
+    public PatternData(Bullet bullet, int count, float spread, float angleOffset, float randomAngleOffset, DamageTeam team, Vector2? position, float? fixedAngle, bool cameFromEffect, List<TrinketEffect> previousEffectsInChain)
     {
         _bullet = bullet;
         _count = count;
@@ -52,6 +53,8 @@ public class PatternData
         _team = team;
         _position = position;
         _fixedAngle = fixedAngle;
+        _cameFromEffect = cameFromEffect;
+        _previousEffectsInChain = previousEffectsInChain;
     }
 
     private Bullet _bullet;
@@ -77,4 +80,10 @@ public class PatternData
 
     private float? _fixedAngle;
     public float? FixedAngle => _fixedAngle;
+    
+    private bool _cameFromEffect;
+    public bool CameFromEffect => _cameFromEffect;
+
+    private List<TrinketEffect> _previousEffectsInChain;
+    public List<TrinketEffect> PreviousEffectsInChain => _previousEffectsInChain;
 }

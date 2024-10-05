@@ -1,19 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
-[CreateAssetMenu(fileName = "Attack From Caster", menuName = "Scriptable Objects/Spell Effects/Attack From Caster")]
-public class AttackFromCasterSpell : SpellEffect
+[CreateAssetMenu(fileName = "Attack From Player Every X Attacks", menuName = "Scriptable Objects/Trinket Effect Activations/Attack From Player Every X Attacks")]
+public class AttackFromPlayerEveryXAttacks : TrinketEffectActivation
 {
     [SerializeField]
     private Attack _attack;
 
-    private Coroutine _attackRoutine;
+    [SerializeField]
+    private int _attacksRequired;
+
+    private int _counter = 0;
+    private Coroutine _attackRoutine = null;
+
+    private void Awake()
+    {
+        _counter = 0;
+    }
 
     public override void Activate()
     {
-        _attackRoutine = CoroutineHelper.Instance.StartCoroutine(AttackRoutine());
+        _counter++;
+        if (_counter >= _attacksRequired)
+        {
+            _attackRoutine = CoroutineHelper.Instance.StartCoroutine(AttackRoutine());
+            _counter = 0;
+        }
     }
 
     private IEnumerator AttackRoutine()
@@ -42,7 +56,7 @@ public class AttackFromCasterSpell : SpellEffect
 
         for (int i = 0; i < _attack.Repetitions; i++)
         {
-            _bulletLauncher.Launch(new PatternData(_attack.Bullet, curCount, curSpread, curAngleOffset, _attack.RandomAngleOffset, DamageTeam.Player, null, _attack.StartAtFixedAngle ? _attack.FixedAngle : null, false, new List<TrinketEffect>()), damageMultiplier);
+            _bulletLauncher.Launch(new PatternData(_attack.Bullet, curCount, curSpread, curAngleOffset, _attack.RandomAngleOffset, DamageTeam.Player, null, _attack.StartAtFixedAngle ? _attack.FixedAngle : null, true, _previousEffectsInChain), damageMultiplier);
 
             curCount += _attack.CountModifier;
             curSpread += _attack.SpreadModifier;

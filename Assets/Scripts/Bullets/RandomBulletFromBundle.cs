@@ -15,7 +15,7 @@ public class RandomBulletFromBundle : Bullet
         }
     }
 
-    public override void Initialize(GameObject spawner, BulletLauncher launcher, DamageTeam team)
+    public override void Initialize(GameObject spawner, BulletLauncher launcher, DamageTeam team, bool cameFromEffect, List<TrinketEffect> previousEffectsInChain, float damageMultiplier)
     {
         Bullet chosenBullet = _bullets[Random.Range(0, _bullets.Count)];
 
@@ -28,7 +28,7 @@ public class RandomBulletFromBundle : Bullet
 
         chosenBullet.gameObject.SetActive(true);
 
-        chosenBullet.Initialize(spawner, launcher, team);
+        chosenBullet.Initialize(spawner, launcher, team, cameFromEffect, previousEffectsInChain, damageMultiplier);
 
         chosenBullet.transform.parent = null;
 

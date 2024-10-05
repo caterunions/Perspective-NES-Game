@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpellInventory", menuName = "Scriptable Objects/SpellInventory")]
+[CreateAssetMenu(fileName = "Spell Inventory", menuName = "Scriptable Objects/Spell Inventory")]
 public class SpellInventoryData : ScriptableObject
 {
     public event Action<SpellInventoryData, Spell[]> OnSpellsChanged;

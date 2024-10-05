@@ -35,6 +35,10 @@ public class Bullet : MonoBehaviour
     private DamageTypes _damageType;
     public DamageTypes DamageType => _damageType;
 
+    [SerializeField]
+    private float _procCoefficient = 1f;
+    public float ProCoefficient => _procCoefficient;
+
     public float DistanceTravelled
     {
         get
@@ -49,6 +53,15 @@ public class Bullet : MonoBehaviour
 
     private BulletLauncher _launcher;
     public BulletLauncher Launcher => _launcher;
+
+    private List<TrinketEffect> _previousEffectsInChain = new List<TrinketEffect>();
+    public List<TrinketEffect> PreviousEffectsInChain => _previousEffectsInChain;
+
+    private float _damageMultiplier;
+    public float DamageMultiplier => _damageMultiplier;
+
+    private bool _cameFromEffect;
+    public bool CameFromEffect => _cameFromEffect;
 
     private Vector2 _origin;
 
@@ -98,10 +111,14 @@ public class Bullet : MonoBehaviour
         _origin = transform.position;
     }
 
-    public virtual void Initialize(GameObject spawner, BulletLauncher launcher, DamageTeam team)
+    public virtual void Initialize(GameObject spawner, BulletLauncher launcher, DamageTeam team, bool cameFromEffect, List<TrinketEffect> previousEffectsInChain, float damageMultiplier)
     {
         _spawner = spawner;
         _launcher = launcher;
+        _cameFromEffect = cameFromEffect;
+        _previousEffectsInChain = previousEffectsInChain;
+        _damage = _damage * damageMultiplier;
+        _damageMultiplier = damageMultiplier;
         _team = team;
 
         if (_collider != null) _collider.enabled = true;

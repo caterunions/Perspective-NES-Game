@@ -13,6 +13,6 @@ public class SpawnBulletsOnDestroy : BulletBehaviour
         float curSpread = _attack.Spread;
         float curAngleOffset = _attack.AngleOffsetStart;
 
-        bullet.Launcher.Launch(new PatternData(_attack.Bullet, curCount, curSpread, curAngleOffset, _attack.RandomAngleOffset, bullet.Team, bullet.transform.position, _attack.StartAtFixedAngle ? _attack.FixedAngle : null));
+        bullet.Launcher.Launch(new PatternData(_attack.Bullet, curCount, curSpread, curAngleOffset, _attack.RandomAngleOffset, bullet.Team, bullet.transform.position, _attack.StartAtFixedAngle ? _attack.FixedAngle : null, bullet.CameFromEffect, bullet.PreviousEffectsInChain), bullet.DamageMultiplier);
     }
 }

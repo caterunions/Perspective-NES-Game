@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.WSA;
 
-[CreateAssetMenu(fileName = "Attack From Caster", menuName = "Scriptable Objects/Spell Effects/Attack From Caster")]
-public class AttackFromCasterSpell : SpellEffect
+[CreateAssetMenu(fileName = "Attack From Player", menuName = "Scriptable Objects/Trinket Effect Activations/Attack From Player")]
+public class AttackFromPlayerActivation : TrinketEffectActivation
 {
     [SerializeField]
     private Attack _attack;
@@ -42,7 +43,7 @@ public class AttackFromCasterSpell : SpellEffect
 
         for (int i = 0; i < _attack.Repetitions; i++)
         {
-            _bulletLauncher.Launch(new PatternData(_attack.Bullet, curCount, curSpread, curAngleOffset, _attack.RandomAngleOffset, DamageTeam.Player, null, _attack.StartAtFixedAngle ? _attack.FixedAngle : null, false, new List<TrinketEffect>()), damageMultiplier);
+            _bulletLauncher.Launch(new PatternData(_attack.Bullet, curCount, curSpread, curAngleOffset, _attack.RandomAngleOffset, DamageTeam.Player, null, _attack.StartAtFixedAngle ? _attack.FixedAngle : null, true, _previousEffectsInChain), damageMultiplier);
 
             curCount += _attack.CountModifier;
             curSpread += _attack.SpreadModifier;

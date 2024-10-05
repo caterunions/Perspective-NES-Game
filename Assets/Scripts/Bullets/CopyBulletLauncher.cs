@@ -9,15 +9,15 @@ public class CopyBulletLauncher : BulletLauncher
 
     private void OnEnable()
     {
-        _launcherToCopy.OnLaunch += CopyLaunch;
+        _launcherToCopy.OnPatternLaunch += CopyLaunch;
     }
 
     private void OnDisable()
     {
-        _launcherToCopy.OnLaunch += CopyLaunch;
+        _launcherToCopy.OnPatternLaunch += CopyLaunch;
     }
 
-    private void CopyLaunch(BulletLauncher launcher, PatternData pattern)
+    private void CopyLaunch(BulletLauncher launcher, PatternData pattern, float damageMultiplier)
     {
         float angleStep = pattern.Spread / pattern.Count;
         float aimAngle = pattern.FixedAngle == null ? transform.rotation.eulerAngles.z + pattern.AngleOffset : (float)pattern.FixedAngle + pattern.AngleOffset;
@@ -37,7 +37,7 @@ public class CopyBulletLauncher : BulletLauncher
             Bullet b = Instantiate(pattern.Bullet, position, rotation);
 
             //b.OnHit += TriggerSpawnedHitEvent;
-            b.Initialize(transform.root.gameObject, this, pattern.Team);
+            b.Initialize(transform.root.gameObject, this, pattern.Team, pattern.CameFromEffect, pattern.PreviousEffectsInChain, damageMultiplier);
         }
     }
 }

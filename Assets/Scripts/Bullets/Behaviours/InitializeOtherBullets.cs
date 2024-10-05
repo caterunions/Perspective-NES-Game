@@ -13,7 +13,7 @@ public class InitializeOtherBullets : BulletBehaviour
         {
             b.gameObject.SetActive(true);
 
-            b.Initialize(bullet.Spawner, bullet.Launcher, bullet.Team);
+            b.Initialize(bullet.Spawner, bullet.Launcher, bullet.Team, bullet.CameFromEffect, bullet.PreviousEffectsInChain, bullet.DamageMultiplier);
         }
     }
 }

@@ -21,16 +21,16 @@ public class EnemyAttack : EnemyAction
 
             for (int i = 0; i < attack.Repetitions; i++)
             {
-                _launcher.Launch(new PatternData(attack.Bullet, curCount, curSpread, curAngleOffset, attack.RandomAngleOffset, DamageTeam.Enemy, null, attack.StartAtFixedAngle ? attack.FixedAngle : null));
+                _launcher.Launch(new PatternData(attack.Bullet, curCount, curSpread, curAngleOffset, attack.RandomAngleOffset, DamageTeam.Enemy, null, attack.StartAtFixedAngle ? attack.FixedAngle : null, false, new List<TrinketEffect>()), Stats.DamageMultiplier);
 
                 curCount += attack.CountModifier;
                 curSpread += attack.SpreadModifier;
                 curAngleOffset += attack.AngleOffsetIncrease;
 
-                yield return new WaitForSeconds(attack.RepeatDelay);
+                yield return new WaitForSeconds(attack.RepeatDelay / Stats.AttackSpeed);
             }
 
-            yield return new WaitForSeconds(attack.EndDelay);
+            yield return new WaitForSeconds(attack.EndDelay / Stats.AttackSpeed);
         }
     }
 }

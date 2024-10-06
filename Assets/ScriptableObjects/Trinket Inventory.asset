@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6eb26556f2b87642ba934ef6e62d7ca, type: 3}
   m_Name: Trinket Inventory
   m_EditorClassIdentifier: 
-  _trinkets:
-  - {fileID: 11400000, guid: 8ac53c1d649ef2747a9d8c7289730505, type: 2}
+  _trinkets: []

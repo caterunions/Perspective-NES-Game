@@ -20,6 +20,6 @@ MonoBehaviour:
     _statIncreaseAmount: -0.1
   _stackable: 1
   _stackType: 1
-  _tickRate: 0.2
+  _tickRate: 0.5
   _procs:
   - {fileID: 11400000, guid: df3ffacf8a4f6a24b92822796a0fac3f, type: 2}

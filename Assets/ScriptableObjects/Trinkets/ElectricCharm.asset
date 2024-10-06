@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb85521eda1e0c4c82fc90648cd6849, type: 3}
+  m_Name: ElectricCharm
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 971082901, guid: 3524079c29e46ae4b9c47013a4bfb1dd, type: 3}
+  _displayName: Electric Charm
+  _description: +10% Electric Damage
+  _rarity: 0
+  _statBoosts:
+  - _statIncrease: 9
+    _type: 0
+    _source: 0
+    _statIncreaseAmount: 0.1
+  _trinketEffects: []

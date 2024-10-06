@@ -39,6 +39,10 @@ public class Bullet : MonoBehaviour
     private float _procCoefficient = 1f;
     public float ProCoefficient => _procCoefficient;
 
+    [SerializeField]
+    private bool _armorPiercing = false;
+    public bool ArmorPiercing => _armorPiercing;
+
     public float DistanceTravelled
     {
         get
@@ -81,7 +85,7 @@ public class Bullet : MonoBehaviour
             {
                 float damage = Damage;
 
-                DamageEvent dmgEvent = new DamageEvent(damage, _spawner, gameObject, _damageType);
+                DamageEvent dmgEvent = new DamageEvent(damage, _spawner, gameObject, _damageType, _armorPiercing);
                 dr.ReceiveDamage(dmgEvent);
                 OnHit?.Invoke(this, dr, dmgEvent);
 

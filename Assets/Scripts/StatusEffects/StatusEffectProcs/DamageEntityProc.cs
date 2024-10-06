@@ -14,6 +14,9 @@ public class DamageEntityProc : StatusEffectProc
     [SerializeField]
     private StackTypes _stackType;
 
+    [SerializeField]
+    private bool _ignoreArmor;
+
     public override void Proc(int stacks)
     {
         float scaledDamage = 0;
@@ -35,6 +38,6 @@ public class DamageEntityProc : StatusEffectProc
 
         Debug.Log(scaledDamage);
 
-        _healthDamageReceiver.ReceiveDamage(new DamageEvent(scaledDamage, null, null, _damageType));
+        _healthDamageReceiver.ReceiveDamage(new DamageEvent(scaledDamage, null, null, _damageType, _ignoreArmor));
     }
 }

@@ -33,18 +33,22 @@ public class DamageReceiver : MonoBehaviour
 
 public class DamageEvent
 {
-    public DamageEvent(float damage, GameObject mainSource, GameObject specificSource, DamageTypes damageType)
+    public DamageEvent(float damage, GameObject mainSource, GameObject specificSource, DamageTypes damageType, bool armorPiercing)
     {
         Damage = damage;
         MainSource = mainSource;
         SpecificSource = specificSource;
         DamageType = damageType;
+        ArmorPiercing = armorPiercing;
+        AppliedDamage = damage;
     }
 
     public float Damage { get; }
     public GameObject MainSource { get; }
     public GameObject SpecificSource { get; }
     public DamageTypes DamageType { get; }
+    public bool ArmorPiercing { get; }
+    public float AppliedDamage { get; set; }
 }
 
 public class DamageResult

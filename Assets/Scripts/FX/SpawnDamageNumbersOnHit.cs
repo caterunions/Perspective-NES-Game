@@ -72,6 +72,6 @@ public class SpawnDamageNumbersOnHit : MonoBehaviour
         }
 
         dmgNum.Text.color = textColor;
-        dmgNum.Text.text = $"-{Mathf.CeilToInt(dmgEvent.Damage)}";
+        dmgNum.Text.text = $"-{Mathf.CeilToInt(dmgEvent.AppliedDamage)}";
     }
 }

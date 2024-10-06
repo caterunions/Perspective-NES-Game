@@ -16,16 +16,20 @@ public class StatusEffectData : ScriptableObject
     public List<StatBoost> StatBoosts => _statBoosts;
 
     [SerializeField]
-    private float _tickRate;
-    public float TickRate => _tickRate;
-
-    [SerializeField]
     private bool _stackable;
     public bool Stackable => _stackable;
 
     [SerializeField]
     private StackTypes _stackType;
     public StackTypes StackType => _stackType;
+
+    [SerializeField]
+    private float _tickRate;
+    public float TickRate => _tickRate;
+
+    [SerializeField]
+    private List<StatusEffectProc> _procs;
+    public List<StatusEffectProc> Procs => _procs;
 }
 
 public enum StackTypes

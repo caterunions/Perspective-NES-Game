@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 8647825259397098311}
+  _healthDamageReceiver: {fileID: 989103372972544303}
 --- !u!1 &7508451367471656583
 GameObject:
   m_ObjectHideFlags: 0

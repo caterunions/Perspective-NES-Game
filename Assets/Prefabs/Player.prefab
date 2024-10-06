@@ -461,3 +461,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 1106804689393191833}
+  _healthDamageReceiver: {fileID: 2949921028267124669}

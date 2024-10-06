@@ -25,10 +25,14 @@ public class StatusEffect
     }
 
     private float _nextProc;
-    public float NextProc => _nextProc;
+    public float NextProc
+    {
+        get { return _nextProc; }
+        set { _nextProc = value; }
+    }
 
-    private float _stackCount = 1;
-    public float StackCount
+    private int _stackCount = 1;
+    public int StackCount
     {
         get 
         {

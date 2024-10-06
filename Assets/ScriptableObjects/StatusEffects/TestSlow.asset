@@ -17,7 +17,9 @@ MonoBehaviour:
   - _statIncrease: 5
     _type: 1
     _source: 1
-    _statIncreaseAmount: -0.2
-  _tickRate: 0
+    _statIncreaseAmount: -0.1
   _stackable: 1
-  _stackType: 2
+  _stackType: 1
+  _tickRate: 0.2
+  _procs:
+  - {fileID: 11400000, guid: df3ffacf8a4f6a24b92822796a0fac3f, type: 2}

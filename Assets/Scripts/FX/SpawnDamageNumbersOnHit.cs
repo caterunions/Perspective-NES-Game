@@ -49,30 +49,26 @@ public class SpawnDamageNumbersOnHit : MonoBehaviour
 
         Color textColor = dmgNum.DefaultColor;
 
-        Bullet bullet = dmgEvent.SpecificSource.GetComponent<Bullet>();
-        if (bullet != null)
+        switch (dmgEvent.DamageType)
         {
-            switch (bullet.DamageType)
-            {
-                case DamageTypes.Arcane:
-                    textColor = dmgNum.ArcaneColor;
-                    break;
-                case DamageTypes.Fire:
-                    textColor = dmgNum.FireColor;
-                    break;
-                case DamageTypes.Ice:
-                    textColor = dmgNum.IceColor;
-                    break;
-                case DamageTypes.Electric:
-                    textColor = dmgNum.ElectricColor;
-                    break;
-                case DamageTypes.Poison:
-                    textColor = dmgNum.PoisonColor;
-                    break;
-                case DamageTypes.Blood:
-                    textColor = dmgNum.BloodColor;
-                    break;
-            }
+            case DamageTypes.Arcane:
+                textColor = dmgNum.ArcaneColor;
+                break;
+            case DamageTypes.Fire:
+                textColor = dmgNum.FireColor;
+                break;
+            case DamageTypes.Ice:
+                textColor = dmgNum.IceColor;
+                break;
+            case DamageTypes.Electric:
+                textColor = dmgNum.ElectricColor;
+                break;
+            case DamageTypes.Poison:
+                textColor = dmgNum.PoisonColor;
+                break;
+            case DamageTypes.Blood:
+                textColor = dmgNum.BloodColor;
+                break;
         }
 
         dmgNum.Text.color = textColor;

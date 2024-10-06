@@ -81,7 +81,7 @@ public class Bullet : MonoBehaviour
             {
                 float damage = Damage;
 
-                DamageEvent dmgEvent = new DamageEvent(damage, _spawner, gameObject);
+                DamageEvent dmgEvent = new DamageEvent(damage, _spawner, gameObject, _damageType);
                 dr.ReceiveDamage(dmgEvent);
                 OnHit?.Invoke(this, dr, dmgEvent);
 

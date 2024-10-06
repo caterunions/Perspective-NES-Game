@@ -10,6 +10,9 @@ public class StatusEffectManager : MonoBehaviour
     [SerializeField]
     private EntityStats _stats;
 
+    [SerializeField]
+    private HealthDamageReceiver _healthDamageReceiver;
+
     private List<StatusEffect> _activeStatusEffects = new List<StatusEffect>();
 
     public void AddStatusEffect(StatusEffect statusEffect)
@@ -94,7 +97,12 @@ public class StatusEffectManager : MonoBehaviour
         }
         foreach (StatusEffect statusEffect in _activeStatusEffects.Where(eff => eff.NextProc <= Time.time))
         {
-            // proc status effect
+            statusEffect.NextProc = Time.time + statusEffect.StatusEffectData.TickRate;
+            foreach(StatusEffectProc proc in statusEffect.StatusEffectData.Procs)
+            {
+                proc.ProvideContext(gameObject, _stats, _healthDamageReceiver, statusEffect);
+                proc.Proc(statusEffect.StackCount);
+            }
         }
     }
 }

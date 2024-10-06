@@ -52,6 +52,15 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
+    private float _moveSpeed
+    {
+        get
+        {
+            if (_stats.MoveSpeed <= 0) return 0;
+            return _stats.MoveSpeed;
+        }
+    }
+
     private void FixedUpdate()
     {
         if (EnemyBrain.Acting) return;
@@ -74,7 +83,7 @@ public class EnemyMove : MonoBehaviour
         }
         else
         {
-            _rb.velocity = moveDir.Value.normalized * _stats.MoveSpeed;
+            _rb.velocity = moveDir.Value.normalized * _moveSpeed;
         }
     }
 }

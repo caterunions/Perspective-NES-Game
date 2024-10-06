@@ -6,6 +6,14 @@ using System;
 [Serializable]
 public class StatBoost
 {
+    public StatBoost(StatTypes statIncrease, StatBoostType type, StatBoostSource source, float statIncreaseAmount)
+    {
+        _statIncrease = statIncrease;
+        _type = type;
+        _source = source;
+        _statIncreaseAmount = statIncreaseAmount;
+    }
+
     [SerializeField]
     private StatTypes _statIncrease;
     public StatTypes StatIncrease => _statIncrease;

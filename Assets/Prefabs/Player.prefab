@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2614785497584810154}
   - component: {fileID: 7410029075591005068}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8678558187682601123}
   - component: {fileID: 901349486428560866}
   - component: {fileID: 7958128949992578416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Aimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,8 @@ GameObject:
   - component: {fileID: 3031510013180147715}
   - component: {fileID: 6745291301344380552}
   - component: {fileID: 3522179583991558896}
-  m_Layer: 0
+  - component: {fileID: 3142030639889689206}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,3 +448,16 @@ MonoBehaviour:
   _playerStats: {fileID: 1106804689393191833}
   _spellInv: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
   _trinketInv: {fileID: 11400000, guid: ae0c07748cbf03f47be94b63c37e23cf, type: 2}
+--- !u!114 &3142030639889689206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002353487323383801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85afae6c4489334b978b12d986a4ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 1106804689393191833}

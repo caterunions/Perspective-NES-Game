@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190782596905709140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Actions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9134568252633131631}
   - component: {fileID: 4741115200183619708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 example attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,8 @@ GameObject:
   - component: {fileID: 5267110317207457854}
   - component: {fileID: 4101325117751298239}
   - component: {fileID: 1431865957742197303}
-  m_Layer: 0
+  - component: {fileID: 2789249097309524715}
+  m_Layer: 6
   m_Name: Test Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,6 +289,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageNumberObj: {fileID: 5107962943194465923, guid: 4e53591b4deb0fa49bebf2cc2e5a43ef, type: 3}
+--- !u!114 &2789249097309524715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253615195341163744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85afae6c4489334b978b12d986a4ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 8647825259397098311}
 --- !u!1 &7508451367471656583
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2646990842662293886}
   - component: {fileID: 6295104091021322795}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +397,7 @@ GameObject:
   - component: {fileID: 6139258095972207967}
   - component: {fileID: 5620176225761123948}
   - component: {fileID: 6511620800570389823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Aimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

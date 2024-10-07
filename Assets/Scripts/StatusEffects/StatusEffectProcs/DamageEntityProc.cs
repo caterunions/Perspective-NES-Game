@@ -21,8 +21,6 @@ public class DamageEntityProc : StatusEffectProc
     {
         float scaledDamage = 0;
 
-        Debug.Log(stacks);
-
         switch (_stackType)
         {
             case StackTypes.Linear:
@@ -35,8 +33,6 @@ public class DamageEntityProc : StatusEffectProc
                 scaledDamage = Mathf.Pow(1 + _damage, stacks);
                 break;
         }
-
-        Debug.Log(scaledDamage);
 
         _healthDamageReceiver.ReceiveDamage(new DamageEvent(scaledDamage, null, null, _damageType, _ignoreArmor));
     }

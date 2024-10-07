@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7163168430147903806}
   - component: {fileID: 8714254849276479317}
   - component: {fileID: 2108460025421356505}
+  - component: {fileID: 7081420364819435132}
+  - component: {fileID: 8825280266675140518}
   m_Layer: 0
   m_Name: TestFireBullet
   m_TagString: Untagged
@@ -124,12 +126,15 @@ MonoBehaviour:
   _behaviours:
   - {fileID: 8714254849276479317}
   - {fileID: 2108460025421356505}
+  - {fileID: 8825280266675140518}
   _solidObjectPierceCount: 0
   _range: 20
   _collider: {fileID: 826484786587837382}
   _destroyOnWalls: 1
   _damage: 1
   _damageType: 2
+  _procCoefficient: 1
+  _armorPiercing: 0
 --- !u!114 &8714254849276479317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +164,35 @@ MonoBehaviour:
   _maxFrequency: 2
   _minMagnitude: 4
   _maxMagnitude: -4
+--- !u!114 &7081420364819435132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958109475525925928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3ce6050579788459958854c884617e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layerToCheck:
+    serializedVersion: 2
+    m_Bits: 64
+  _radius: 3
+--- !u!114 &8825280266675140518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958109475525925928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7458a5db713333c4795d1fadb25dcb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxTurnDegrees: 30
 --- !u!1 &2552077596774974351
 GameObject:
   m_ObjectHideFlags: 0

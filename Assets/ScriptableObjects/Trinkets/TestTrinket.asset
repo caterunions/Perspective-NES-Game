@@ -32,9 +32,3 @@ MonoBehaviour:
     _chance: 10
     _activations:
     - {fileID: 11400000, guid: fb0a1f95c9886614ba5bbb1fdbc7151e, type: 2}
-  - _id: 47dd40ae-b515-4df6-a4dc-e35039cb5c58
-    _trigger: 5
-    _damageType: 2
-    _chance: 10
-    _activations:
-    - {fileID: 11400000, guid: 33424ca01dad03e468730dd88787a41a, type: 2}

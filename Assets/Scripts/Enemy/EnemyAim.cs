@@ -19,6 +19,11 @@ public class EnemyAim : MonoBehaviour
         set { _locked = value; }
     }
 
+    public bool PlayerLeftOfEnemy
+    {
+        get { return _player.transform.position.x > transform.position.x; }
+    }
+
     private void Update()
     {
         if (Player == null) return;

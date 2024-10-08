@@ -1,35 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyAnimate : MonoBehaviour
 {
     [SerializeField]
-    private Animator _animator;
+    private EnemyAim _aimer;
 
     [SerializeField]
-    private Rigidbody2D _rb;
+    private EnemyMove _mover;
 
     [SerializeField]
     private BulletLauncher _launcher;
 
-    private float _lastMoveDir = 0;
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
 
-    private bool _attacking = false;
+    [SerializeField]
+    private Sprite _idleSprite;
 
-    private EnemyBrain _enemyBrain;
-    protected EnemyBrain EnemyBrain
-    {
-        get
-        {
-            if (_enemyBrain == null) _enemyBrain = GetComponentInParent<EnemyBrain>();
-            return _enemyBrain;
-        }
-    }
+    [SerializeField]
+    private Sprite[] _walkSprites;
+
+    [SerializeField]
+    private float _walkSpriteDurations;
+
+    private int _walkIndex = 0;
+
+    [SerializeField]
+    private Sprite _attackSprite;
+
+    [SerializeField]
+    private float _attackSpriteDuration;
+
+    private Coroutine _animationRoutine;
 
     private void OnEnable()
     {
         _launcher.OnPatternLaunch += PerformAttackAnimation;
+
+        _animationRoutine = StartCoroutine(WalkRoutine());
     }
 
     private void OnDisable()
@@ -37,41 +48,47 @@ public class EnemyAnimate : MonoBehaviour
         _launcher.OnPatternLaunch -= PerformAttackAnimation;
     }
 
+    private void PerformAttackAnimation(BulletLauncher launcher, PatternData pattern, float damageMultiplier)
+    {
+        _animationRoutine = null;
+        _animationRoutine = StartCoroutine(AttackRoutine());
+    }
+
     private void Update()
     {
-        if(!_attacking)
-        {
-            if (_rb.velocity.x > 0)
-            {
-                _lastMoveDir = _rb.velocity.x;
-                // moving right
-            }
-            else if (_rb.velocity.x < 0)
-            {
-                _lastMoveDir = _rb.velocity.x;
-                // moving left
-            }
+        _spriteRenderer.flipX = _aimer.PlayerLeftOfEnemy;
 
-            _animator.SetFloat("MoveDir", _lastMoveDir);
-            _animator.speed = _rb.velocity.magnitude / 10;
-        }
-
-        if(!EnemyBrain.Acting)
+        if(_animationRoutine == null)
         {
-            _attacking = false;
-            _animator.ResetTrigger("AttackRight");
-            _animator.ResetTrigger("AttackLeft");
-            _animator.SetBool("Attacking", false);
+            _animationRoutine = StartCoroutine(WalkRoutine());
         }
     }
 
-    private void PerformAttackAnimation(BulletLauncher launcher, PatternData pattern, float damageMultiplier)
+    private IEnumerator WalkRoutine()
     {
-        _attacking = true;
-        _animator.speed = 1f;
-        string trigger = "";
-        trigger = _lastMoveDir > 0 ? "AttackRight" : "AttackLeft";
-        _animator.SetTrigger(trigger);
-        _animator.SetBool("Attacking", true);
+        while(!_mover.WithinRange)
+        {
+            _spriteRenderer.sprite = _walkSprites[_walkIndex];
+            _walkIndex++;
+            if(_walkIndex >= _walkSprites.Length) _walkIndex = 0;
+
+            if (_mover.WithinRange) break;
+
+            yield return new WaitForSeconds(_walkSpriteDurations);
+        }
+        _animationRoutine = null;
+    }
+
+    private IEnumerator AttackRoutine()
+    {
+        _spriteRenderer.sprite = _attackSprite;
+
+        yield return new WaitForSeconds(_attackSpriteDuration);
+
+        _spriteRenderer.sprite = _idleSprite;
+
+        yield return new WaitUntil(() => _mover.WithinRange);
+
+        _animationRoutine = null;
     }
 }

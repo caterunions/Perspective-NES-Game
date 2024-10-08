@@ -492,10 +492,11 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 6295104091021322795}
   _idleSprite: {fileID: -808694344, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   _walkSprites:
-  - {fileID: -808694344, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   - {fileID: 327384182, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
+  - {fileID: 1573889054, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
+  - {fileID: -808694344, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   _walkSpriteDurations: 0.2
-  _attackSprite: {fileID: 1573889054, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
+  _attackSprite: {fileID: 229990691, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   _attackSpriteDuration: 0.6
 --- !u!1 &8225446816957347286
 GameObject:

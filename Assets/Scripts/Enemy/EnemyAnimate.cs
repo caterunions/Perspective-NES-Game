@@ -65,9 +65,10 @@ public class EnemyAnimate : MonoBehaviour
 
     private void Update()
     {
-        _spriteRenderer.flipX = _aimer.PlayerLeftOfEnemy;
+        _spriteRenderer.flipX = _mover.LastMoveDir.x > 0;
+        if (Brain.Acting) _spriteRenderer.flipX = _aimer.PlayerLeftOfEnemy;
 
-        if(_animationRoutine == null)
+        if (_animationRoutine == null)
         {
             if(Brain.Acting) _spriteRenderer.sprite = _idleSprite;
             else _animationRoutine = StartCoroutine(WalkRoutine());

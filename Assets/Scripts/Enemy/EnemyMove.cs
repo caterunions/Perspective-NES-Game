@@ -61,6 +61,9 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
+    private Vector2 _lastMoveDir;
+    public Vector2 LastMoveDir => _lastMoveDir;
+
     private void FixedUpdate()
     {
         if (_player == null) return;
@@ -84,6 +87,7 @@ public class EnemyMove : MonoBehaviour
         }
         else
         {
+            _lastMoveDir = moveDir.Value;
             _rb.velocity = moveDir.Value.normalized * _moveSpeed;
         }
     }

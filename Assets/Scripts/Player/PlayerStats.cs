@@ -8,14 +8,19 @@ public class PlayerStats : EntityStats
     public event Action<PlayerStats, float> OnManaChange;
 
     // mana
-
     [SerializeField]
     private float _maxMana;
-    public float MaxMana => _maxMana;
+    public float MaxMana
+    {
+        get { return ApplyStatBoosts(_maxMana, StatTypes.MaxMana); }
+    }
 
     [SerializeField]
     private float _manaRegen;
-    public float ManaRegen => _manaRegen;
+    public float ManaRegen
+    {
+        get { return ApplyStatBoosts(_manaRegen, StatTypes.ManaRegen); }
+    }
 
     private float _currentMana;
     public float CurrentMana => _currentMana;
@@ -76,5 +81,23 @@ public class PlayerStats : EntityStats
     public float BloodDamageMultiplier
     {
         get { return ApplyStatBoosts(_bloodDamageMultiplier, StatTypes.BloodDamageMult) + (DamageMultiplier - 1); }
+    }
+
+    private float _summonLifetimeMultiplier = 1;
+    public float SummonLifetimeMultiplier
+    {
+        get { return ApplyStatBoosts(_summonLifetimeMultiplier, StatTypes.SummonLifetimeMult); }
+    }
+
+    private float _summonAttackSpeed = 1;
+    public float SummonAttackSpeed
+    {
+        get { return ApplyStatBoosts(_summonAttackSpeed, StatTypes.SummonAttackSpeed); }
+    }
+
+    private float _summonDamageMultiplier = 1;
+    public float SummonDamageMultiplier
+    {
+        get { return ApplyStatBoosts(_summonDamageMultiplier, StatTypes.SummonDamageMult); }
     }
 }

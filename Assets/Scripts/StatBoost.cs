@@ -62,7 +62,10 @@ public enum StatTypes
     PoisonDamageMult,
     BloodDamageMult,
     MaxMana,
-    ManaRegen
+    ManaRegen,
+    SummonLifetimeMult,
+    SummonAttackSpeed,
+    SummonDamageMult
 }
 
 public enum StatBoostType

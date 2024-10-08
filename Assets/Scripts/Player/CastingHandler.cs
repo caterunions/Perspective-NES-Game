@@ -12,6 +12,9 @@ public class CastingHandler : MonoBehaviour
     [SerializeField]
     private PlayerStats _stats;
 
+    [SerializeField]
+    private SummonManager _summonManager;
+
     public SpellInventoryData SpellInventoryData { get; set; }
 
     [SerializeField]
@@ -40,7 +43,7 @@ public class CastingHandler : MonoBehaviour
 
         foreach(SpellEffect effect in _curSpell.SpellStartEffects)
         {
-            effect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher);
+            effect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher, _summonManager);
             effect.Activate();
         }
 
@@ -48,7 +51,7 @@ public class CastingHandler : MonoBehaviour
         {
             foreach(SpellSustainEffect susEffect in _curSpell.SpellSustainEffects)
             {
-                susEffect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher);
+                susEffect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher, _summonManager);
                 susEffect.Activate();
             }
         } 
@@ -70,7 +73,7 @@ public class CastingHandler : MonoBehaviour
             }
             foreach(SpellEffect effect in _curSpell.SpellEndEffects)
             {
-                effect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher);
+                effect.ProvideContext(_player, SpellInventoryData, _stats, _bulletLauncher, _summonManager);
                 effect.Activate();
             }
         }

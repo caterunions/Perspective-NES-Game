@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class GroupedAction : EnemyAction
+public class GroupedEnemyAction : EnemyAction
 {
     [SerializeField]
     private List<EnemyAction> _groupedActions;

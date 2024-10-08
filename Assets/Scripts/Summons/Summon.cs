@@ -19,6 +19,7 @@ public class Summon : MonoBehaviour
     }
 
     private GameObject _spawner;
+    public GameObject Spawner => _spawner;
 
     private PlayerStats _stats;
     public PlayerStats Stats => _stats;

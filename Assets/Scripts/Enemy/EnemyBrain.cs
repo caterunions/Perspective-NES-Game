@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class EnemyBrain : MonoBehaviour
 {
-    private HealthPool _healthPool;
-    protected HealthPool healthPool
+    private DamageReceiver _damageReceiver;
+    public DamageReceiver DamageReceiver
     {
         get
         {
-            if (_healthPool == null) _healthPool = GetComponent<HealthPool>();
-            return _healthPool;
+            if (_damageReceiver == null) _damageReceiver = GetComponent<DamageReceiver>();
+            return _damageReceiver;
         }
     }
 
@@ -60,10 +60,6 @@ public class EnemyBrain : MonoBehaviour
 
     private void OnEnable()
     {
-        // remove when spawner logic is added
-        _aimer.Player = _player.transform;
-        _mover.Player = _player.transform;
-
         _actionIndex = 0;
         _curAction = _actions[_actionIndex];
     }

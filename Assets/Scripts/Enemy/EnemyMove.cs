@@ -63,6 +63,7 @@ public class EnemyMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_player == null) return;
         if (EnemyBrain.Acting) return;
 
         Vector2? moveDir = null;

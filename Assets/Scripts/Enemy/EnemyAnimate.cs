@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class EnemyAnimate : MonoBehaviour
 {
+    private EnemyBrain _brain;
+    protected EnemyBrain Brain
+    {
+        get
+        {
+            if (_brain == null) _brain = GetComponentInParent<EnemyBrain>();
+            return _brain;
+        }
+    }
+
     [SerializeField]
     private EnemyAim _aimer;
 
@@ -50,7 +60,6 @@ public class EnemyAnimate : MonoBehaviour
 
     private void PerformAttackAnimation(BulletLauncher launcher, PatternData pattern, float damageMultiplier)
     {
-        _animationRoutine = null;
         _animationRoutine = StartCoroutine(AttackRoutine());
     }
 
@@ -60,7 +69,8 @@ public class EnemyAnimate : MonoBehaviour
 
         if(_animationRoutine == null)
         {
-            _animationRoutine = StartCoroutine(WalkRoutine());
+            if(Brain.Acting) _spriteRenderer.sprite = _idleSprite;
+            else _animationRoutine = StartCoroutine(WalkRoutine());
         }
     }
 
@@ -72,10 +82,9 @@ public class EnemyAnimate : MonoBehaviour
             _walkIndex++;
             if(_walkIndex >= _walkSprites.Length) _walkIndex = 0;
 
-            if (_mover.WithinRange) break;
-
             yield return new WaitForSeconds(_walkSpriteDurations);
         }
+        _spriteRenderer.sprite = _idleSprite;
         _animationRoutine = null;
     }
 
@@ -84,10 +93,6 @@ public class EnemyAnimate : MonoBehaviour
         _spriteRenderer.sprite = _attackSprite;
 
         yield return new WaitForSeconds(_attackSpriteDuration);
-
-        _spriteRenderer.sprite = _idleSprite;
-
-        yield return new WaitUntil(() => _mover.WithinRange);
 
         _animationRoutine = null;
     }

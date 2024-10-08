@@ -2776,9 +2776,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7410029075591005068, guid: 700fc85735c53604cb4588df51d8975f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 27f089d4295c6474e8f69ec1bcad68ca, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8743739964750296526, guid: 700fc85735c53604cb4588df51d8975f, type: 3}
       propertyPath: _camera
       value: 

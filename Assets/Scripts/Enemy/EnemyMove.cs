@@ -56,6 +56,7 @@ public class EnemyMove : MonoBehaviour
     {
         get
         {
+            if (_distToPlayer > 25f) return _stats.MoveSpeed * 5;
             if (_stats.MoveSpeed <= 0) return 0;
             return _stats.MoveSpeed;
         }

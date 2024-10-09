@@ -7,6 +7,21 @@ public class PlayerStats : EntityStats
 {
     public event Action<PlayerStats, float> OnManaChange;
 
+    [SerializeField]
+    private PlayerFire _playerFire;
+
+    [SerializeField]
+    private float _moveSpeedMultWhenFiring = 0.5f;
+
+    public float CurrentMoveSpeed
+    {
+        get 
+        {
+            if (_playerFire.Firing) return MoveSpeed * _moveSpeedMultWhenFiring;
+            return MoveSpeed;
+        }
+    }
+
     // mana
     [SerializeField]
     private float _maxMana;

@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        _rb.velocity = _lastMoveInput * _stats.MoveSpeed;
+        _rb.velocity = _lastMoveInput * _stats.CurrentMoveSpeed;
     }
 
     private void OnDisable()

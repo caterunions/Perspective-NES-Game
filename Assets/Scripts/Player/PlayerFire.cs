@@ -19,7 +19,10 @@ public class PlayerFire : MonoBehaviour
     private BulletLauncher _launcher;
 
     private bool _firing;
-    public bool Firing => _firing;
+    public bool Firing
+    {
+        get { return _fireRoutine != null; }
+    }
 
     private Coroutine _fireRoutine = null;
 

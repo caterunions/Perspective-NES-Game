@@ -6,8 +6,13 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public event Action<EnemySpawner, int> OnWaveComplete;
+
     [SerializeField]
     private GameObject _player;
+
+    [SerializeField]
+    private WaveRewards _rewards;
 
     [SerializeField]
     private List<EnemyWave> _waves;
@@ -21,6 +26,10 @@ public class EnemySpawner : MonoBehaviour
     public int RemainingEnemies => _remainingEnemies;
 
     private int _waveIndex = 0;
+    public int CurrentWave
+    {
+        get { return _waveIndex; }
+    }
 
     public void SpawnEnemy(EnemyBrain enemy, Vector2 position)
     {
@@ -46,8 +55,13 @@ public class EnemySpawner : MonoBehaviour
     {
         if(_remainingEnemies == 0 && _waveIndex < _waves.Count)
         {
-            SpawnWave(_waves[_waveIndex]);
-            _waveIndex++;
+            if (_waveIndex > 0) OnWaveComplete?.Invoke(this, _waveIndex);
+
+            if (!_rewards.RewardsPending)
+            {
+                SpawnWave(_waves[_waveIndex]);
+                _waveIndex++;
+            }
         }
     }
 

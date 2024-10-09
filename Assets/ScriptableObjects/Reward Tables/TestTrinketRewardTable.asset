@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34771d084d1636d46bd9b75ded2c0ebf, type: 3}
+  m_Name: TestTrinketRewardTable
+  m_EditorClassIdentifier: 
+  _weightedTrinkets:
+  - _trinket: {fileID: 11400000, guid: f5f002d86a2ab3d4782fb128d450f403, type: 2}
+    _weight: 100
+  - _trinket: {fileID: 11400000, guid: 09e70204b9cac854298e3955a7a97b53, type: 2}
+    _weight: 50
+  - _trinket: {fileID: 11400000, guid: 41d4295bf9542bc4b8a199123890dd96, type: 2}
+    _weight: 40
+  - _trinket: {fileID: 11400000, guid: 77f90b24d32681c4ead842fdc965c795, type: 2}
+    _weight: 30
+  - _trinket: {fileID: 11400000, guid: cafe597895218a5408e6a87ede31bbf3, type: 2}
+    _weight: 20
+  - _trinket: {fileID: 11400000, guid: 5c49624281db8744fa47cab48cce2f6f, type: 2}
+    _weight: 10

@@ -1358,23 +1358,18 @@ MonoBehaviour:
   _waves:
   - _enemyWaveSpawns:
     - _spawnPoint: {fileID: 991817003}
-      _enemy: {fileID: 4283499290640475370, guid: 8e62799dbb9e67244a8acf49d8094139, type: 3}
-      _count: 10
+      _enemy: {fileID: 4283499290640475370, guid: 09f1834984a1c774ebbd032a1243d42e, type: 3}
+      _count: 2
       _spawnInterval: 0.5
       _startDelay: 0
     - _spawnPoint: {fileID: 813420175}
-      _enemy: {fileID: 4283499290640475370, guid: 8e62799dbb9e67244a8acf49d8094139, type: 3}
-      _count: 10
+      _enemy: {fileID: 4283499290640475370, guid: ea7cf11c7ce16f147af1c3fc83e9528a, type: 3}
+      _count: 2
       _spawnInterval: 0.5
       _startDelay: 0
     - _spawnPoint: {fileID: 368728236}
-      _enemy: {fileID: 4283499290640475370, guid: 8e62799dbb9e67244a8acf49d8094139, type: 3}
-      _count: 10
-      _spawnInterval: 0.5
-      _startDelay: 0
-    - _spawnPoint: {fileID: 2113296641}
-      _enemy: {fileID: 4283499290640475370, guid: 8e62799dbb9e67244a8acf49d8094139, type: 3}
-      _count: 10
+      _enemy: {fileID: 4283499290640475370, guid: bddde984386a4874493ae461bb78e0a3, type: 3}
+      _count: 2
       _spawnInterval: 0.5
       _startDelay: 0
   - _enemyWaveSpawns:

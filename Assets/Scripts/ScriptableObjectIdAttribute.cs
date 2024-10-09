@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScriptableObjectIdAttribute : PropertyAttribute { }
 
+#if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(ScriptableObjectIdAttribute))]
 public class ScriptableObjectIdDrawer : PropertyDrawer
 {
@@ -18,3 +19,4 @@ public class ScriptableObjectIdDrawer : PropertyDrawer
         GUI.enabled = true;
     }
 }
+#endif

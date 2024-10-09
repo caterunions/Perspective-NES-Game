@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
-using UnityEngine.WSA;
 
 [CreateAssetMenu(fileName = "Attack From Player", menuName = "Scriptable Objects/Trinket Effect Activations/Attack From Player")]
 public class AttackFromPlayerActivation : TrinketEffectActivation

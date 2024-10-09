@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-using static Akaal.PvCustomizer.Editor.Utils.PvIconAttributeCache;
 
 public class StatusEffectManager : MonoBehaviour
 {

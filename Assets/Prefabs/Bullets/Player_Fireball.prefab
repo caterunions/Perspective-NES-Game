@@ -127,7 +127,7 @@ MonoBehaviour:
   - {fileID: 8032417775487034896}
   - {fileID: 983647678226092882}
   _solidObjectPierceCount: 0
-  _range: 15
+  _range: 8
   _collider: {fileID: 826484786587837382}
   _destroyOnWalls: 1
   _damage: 10

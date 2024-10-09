@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9000862202578096661}
   - component: {fileID: 826484786587837382}
   - component: {fileID: 7163168430147903806}
-  - component: {fileID: 8714254849276479317}
+  - component: {fileID: 100937903052763978}
   m_Layer: 0
   m_Name: TestBullet
   m_TagString: Untagged
@@ -121,25 +121,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviours:
-  - {fileID: 8714254849276479317}
+  - {fileID: 100937903052763978}
   _solidObjectPierceCount: 0
-  _range: 10
+  _range: 12
   _collider: {fileID: 826484786587837382}
   _destroyOnWalls: 1
   _damage: 1
---- !u!114 &8714254849276479317
+  _damageType: 0
+  _procCoefficient: 1
+  _armorPiercing: 0
+--- !u!114 &100937903052763978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958109475525925928}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2a2a7b908b571f42b01a55939c341fe, type: 3}
+  m_Script: {fileID: 11500000, guid: d9eaa15e6c158424993baf12b464610a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocity: 10
+  _startVelocity: 5
+  _endVelocity: 15
+  _rampTime: 0.5
 --- !u!1 &2552077596774974351
 GameObject:
   m_ObjectHideFlags: 0

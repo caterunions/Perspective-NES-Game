@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc014cf24a5b96a40986ebb82842cd1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startDelay: 1
+  _startDelay: 0.5
   _endDelay: 0
   _attacks:
   - _bullet: {fileID: 7163168430147903806, guid: 5526775fc74b83b49be58a2a189432bd, type: 3}
@@ -175,7 +175,7 @@ MonoBehaviour:
     _endDelay: 0.5
     _startAtFixedAngle: 0
     _fixedAngle: 0
-    _randomAngleOffset: 10
+    _randomAngleOffset: 5
   _launcher: {fileID: 6511620800570389823}
 --- !u!1 &4253615195341163744
 GameObject:
@@ -298,7 +298,7 @@ MonoBehaviour:
   _maxHealth: 100
   _regen: 0
   _armor: 0
-  _moveSpeed: 1.5
+  _moveSpeed: 2
 --- !u!58 &5267110317207457854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   - {fileID: 327384182, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   - {fileID: 1573889054, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   - {fileID: -808694344, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
-  _walkSpriteDurations: 0.2
+  _walkSpriteDurations: 0.15
   _attackSprite: {fileID: 229990691, guid: e234611172f0ba8469913d3aa9cb2c28, type: 3}
   _attackSpriteDuration: 0.6
 --- !u!1 &8225446816957347286

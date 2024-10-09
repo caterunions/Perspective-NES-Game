@@ -19,7 +19,7 @@ public class SpellSelection : MonoBehaviour
     {
         if (_castingHandler.CastingSpell) return;
 
-        if(scroll > 0)
+        if(scroll < 0)
         {
             if(_spellInventoryData.SelectedSpellIndex == _spellInventoryData.Spells.Length - 1)
             {
@@ -30,7 +30,7 @@ public class SpellSelection : MonoBehaviour
                 _spellInventoryData.SelectedSpellIndex++;
             }
         }
-        else if(scroll < 0)
+        else if(scroll > 0)
         {
             if (_spellInventoryData.SelectedSpellIndex == 0)
             {

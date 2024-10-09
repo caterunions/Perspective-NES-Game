@@ -12,9 +12,6 @@ public class EnemySpawner : MonoBehaviour
     private GameObject _player;
 
     [SerializeField]
-    private WaveRewards _rewards;
-
-    [SerializeField]
     private List<EnemyWave> _waves;
 
     private List<EnemyBrain> _aliveEnemies = new List<EnemyBrain>();
@@ -30,6 +27,8 @@ public class EnemySpawner : MonoBehaviour
     {
         get { return _waveIndex; }
     }
+
+    public bool RewardsPending { get; set; } = false;
 
     public void SpawnEnemy(EnemyBrain enemy, Vector2 position)
     {
@@ -57,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (_waveIndex > 0) OnWaveComplete?.Invoke(this, _waveIndex);
 
-            if (!_rewards.RewardsPending)
+            if (!RewardsPending)
             {
                 SpawnWave(_waves[_waveIndex]);
                 _waveIndex++;

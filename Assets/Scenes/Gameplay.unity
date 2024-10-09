@@ -1477,7 +1477,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 6599354632770329821}
-  _rewards: {fileID: 558808058}
   _waves:
   - _enemyWaveSpawns:
     - _spawnPoint: {fileID: 991817003}
@@ -1549,7 +1548,7 @@ MonoBehaviour:
   _spawner: {fileID: 558808057}
   _rewardDisplay: {fileID: 1912768}
   _trinketRewardList:
-  - _waveNumber: 3
+  - _waveNumber: 2
     _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
     _optionsCount: 4
   _spellRewardList: []
@@ -2629,7 +2628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314713312

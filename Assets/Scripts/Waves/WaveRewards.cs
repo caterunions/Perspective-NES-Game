@@ -23,7 +23,6 @@ public class WaveRewards : MonoBehaviour
     private Spell[] _currentSpellRewards;
     public Spell[] CurrentSpellRewards => _currentSpellRewards;
 
-    public bool RewardsPending { get; private set; } = false;
 
     private void OnEnable()
     {
@@ -41,11 +40,11 @@ public class WaveRewards : MonoBehaviour
 
         if (trinketRewards.Count == 0)
         {
-            RewardsPending = false;
+            _spawner.RewardsPending = false;
             return;
         }
 
-        RewardsPending = true;
+        _spawner.RewardsPending = true;
         foreach(TrinketRewards rewards in trinketRewards)
         {
             _currentSpellRewards = new Spell[0];

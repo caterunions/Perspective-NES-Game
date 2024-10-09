@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 [CreateAssetMenu(fileName = "Attack From Player Every X Attacks", menuName = "Scriptable Objects/Trinket Effect Activations/Attack From Player Every X Attacks")]
 public class AttackFromPlayerEveryXAttacks : TrinketEffectActivation

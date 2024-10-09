@@ -23,6 +23,19 @@ public class EnemyMove : MonoBehaviour
         set { _player = value; }
     }
 
+    [SerializeField]
+    private float _maxOffsetDistance;
+
+    private Vector2 _offset;
+
+    private Vector3 _targetPos
+    {
+        get
+        {
+            return (Vector2)_player.transform.position + _offset;
+        }
+    }
+
     private EnemyBrain _enemyBrain;
     protected EnemyBrain EnemyBrain
     {
@@ -47,8 +60,8 @@ public class EnemyMove : MonoBehaviour
     {
         get
         {
-            if (_player == null) return float.MaxValue;
-            return Vector2.Distance(transform.position, _player.position);
+            if (_targetPos == null) return float.MaxValue;
+            return Vector2.Distance(transform.position, _targetPos);
         }
     }
 
@@ -56,14 +69,24 @@ public class EnemyMove : MonoBehaviour
     {
         get
         {
-            if (_distToPlayer > 25f) return _stats.MoveSpeed * 5;
+            if (_distToPlayer > 30f) return _stats.MoveSpeed * 5;
             if (_stats.MoveSpeed <= 0) return 0;
-            return _stats.MoveSpeed;
+            return _stats.MoveSpeed * _moveSpeedMult;
         }
     }
 
+    private float _moveSpeedMult;
+    public float MoveSpeedMult => _moveSpeedMult;
+
     private Vector2 _lastMoveDir;
     public Vector2 LastMoveDir => _lastMoveDir;
+
+    private void OnEnable()
+    {
+        _moveSpeedMult = Random.Range(0.8f, 1.2f);
+        float random = Random.Range(0f, 360f);
+        _offset = new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * Random.Range(0f, _maxOffsetDistance);
+    }
 
     private void FixedUpdate()
     {
@@ -74,17 +97,19 @@ public class EnemyMove : MonoBehaviour
 
         if(_distToPlayer < _minAcceptableDistance)
         {
-            moveDir = _player.position - transform.position;
+            moveDir = _targetPos - transform.position;
             moveDir *= -1;
         }
         else if(_distToPlayer > _maxAcceptableDistance)
         {
-            moveDir = _player.position - transform.position;
+            moveDir = _targetPos - transform.position;
         }
 
         if(moveDir == null)
         {
             _rb.velocity = Vector2.zero;
+            float random = Random.Range(0f, 360f);
+            _offset = new Vector2(Mathf.Cos(random), Mathf.Sin(random)) * Random.Range(0f, _maxOffsetDistance);
         }
         else
         {

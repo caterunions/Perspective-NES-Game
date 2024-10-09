@@ -250,10 +250,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3d1464daae6bd45aabc78a4c1a2b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minAcceptableDistance: 7
-  _maxAcceptableDistance: 9
+  _minAcceptableDistance: 6
+  _maxAcceptableDistance: 6.5
   _stats: {fileID: 8647825259397098311}
   _rb: {fileID: 4101325117751298239}
+  _personalSpaceBubble: {fileID: 0}
+  _maxOffsetDistance: 3
 --- !u!114 &989103372972544303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,9 +333,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!50 &4101325117751298239
 Rigidbody2D:
   serializedVersion: 4

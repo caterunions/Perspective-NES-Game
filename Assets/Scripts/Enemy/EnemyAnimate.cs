@@ -83,7 +83,7 @@ public class EnemyAnimate : MonoBehaviour
             _walkIndex++;
             if(_walkIndex >= _walkSprites.Length) _walkIndex = 0;
 
-            yield return new WaitForSeconds(_walkSpriteDurations);
+            yield return new WaitForSeconds(_walkSpriteDurations / _mover.MoveSpeedMult);
         }
         _spriteRenderer.sprite = _idleSprite;
         _animationRoutine = null;

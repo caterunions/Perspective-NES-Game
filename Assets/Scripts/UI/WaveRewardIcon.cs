@@ -18,12 +18,21 @@ public class WaveRewardIcon : MonoBehaviour, IPointerClickHandler
         get { return _trinket; }
         set
         {
-            _image.sprite = value.Sprite;
+            if(value != null) _image.sprite = value.Sprite;
             _trinket = value;
         }
     }
 
-    public Spell Spell { get; set; }
+    private Spell _spell;
+    public Spell Spell
+    {
+        get { return _spell; }
+        set
+        {
+            if(value != null) _image.sprite = value.Icon;
+            _spell = value;
+        }
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {

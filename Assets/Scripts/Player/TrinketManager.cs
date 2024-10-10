@@ -24,6 +24,8 @@ public class TrinketManager : MonoBehaviour
 
     private void OnEnable()
     {
+        _trinketInv.ClearTrinkets();
+
         _trinketInv.OnTrinketsChange += HandleTrinketsChange;
 
         _bulletLauncher.OnSpawnedBulletHit += HandleOnHitEffects;

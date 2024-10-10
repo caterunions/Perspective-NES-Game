@@ -43,8 +43,17 @@ public class WaveRewards : MonoBehaviour
     private void GiveRewards(EnemySpawner spawner, int waveNum)
     {
         TrinketRewards trinketRewards = _trinketRewardList.FirstOrDefault(rew => rew.WaveNumber == waveNum);
+        SpellRewards spellRewards = _spellRewardList.FirstOrDefault(rew => rew.WaveNumber == waveNum);
 
-        if (trinketRewards != null)
+        if (spellRewards != null)
+        {
+            _currentSpellRewards = spellRewards.GetSpellOptions();
+            _currentTrinketRewards = new Trinket[0];
+            _rewardDisplay.gameObject.SetActive(true);
+
+            _spawner.RewardsPending = true;
+        }
+        else if (trinketRewards != null)
         {
             _currentSpellRewards = new Spell[0];
             _currentTrinketRewards = trinketRewards.GetTrinketOptions();
@@ -62,6 +71,22 @@ public class WaveRewards : MonoBehaviour
     {
         _spawner.RewardsPending = false;
         _trinketInv.AddTrinket(trinket);
+        _rewardDisplay.gameObject.SetActive(false);
+    }
+
+    public void SetSpellSelection(Spell spell)
+    {
+        _spawner.RewardsPending = false;
+        int spellSlotToFill = -1;
+        for(int i = 0; i < _spellInv.Spells.Length; i++)
+        {
+            if (_spellInv.Spells[i] == null) spellSlotToFill = i;
+        }
+        if (spellSlotToFill >= 0) _spellInv.SetCastingSpellSlot(spellSlotToFill, spell);
+        else
+        {
+            _spellInv.SetCastingSpellSlot(_spellInv.SelectedSpellIndex, spell);
+        }
         _rewardDisplay.gameObject.SetActive(false);
     }
 }

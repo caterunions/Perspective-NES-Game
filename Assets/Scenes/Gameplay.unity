@@ -1432,17 +1432,14 @@ MonoBehaviour:
   _rewardDisplay: {fileID: 1912768}
   _trinketInv: {fileID: 11400000, guid: ae0c07748cbf03f47be94b63c37e23cf, type: 2}
   _spellInv: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
-  _trinketRewardList:
+  _trinketRewardList: []
+  _spellRewardList:
   - _waveNumber: 1
-    _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
-    _optionsCount: 4
+    _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
+    _optionsCount: 5
   - _waveNumber: 2
-    _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
-    _optionsCount: 4
-  - _waveNumber: 3
-    _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
-    _optionsCount: 4
-  _spellRewardList: []
+    _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
+    _optionsCount: 8
 --- !u!1 &600217478
 GameObject:
   m_ObjectHideFlags: 0

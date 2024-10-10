@@ -28,7 +28,7 @@ MonoBehaviour:
     _startAtFixedAngle: 0
     _fixedAngle: 0
     _randomAngleOffset: 5
-  _manaCost: 0
+  _manaCost: 40
   _cooldown: 0
   _canBeHeldDown: 0
   _manaDrain: 0

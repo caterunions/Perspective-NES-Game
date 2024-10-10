@@ -18,4 +18,9 @@ public class TrinketInventoryData : ScriptableObject
         _trinkets.Add(trinket);
         OnTrinketsChange?.Invoke(this, _oldTrinkets);
     }
+
+    public void ClearTrinkets()
+    {
+        _trinkets.Clear();
+    }
 }

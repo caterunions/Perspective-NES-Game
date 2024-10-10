@@ -43,7 +43,7 @@ public class WaveRewardDisplay : MonoBehaviour
         }
         else if(spell != null)
         {
-            
+            _waveRewards.SetSpellSelection(spell);
         }
     }
 
@@ -58,6 +58,7 @@ public class WaveRewardDisplay : MonoBehaviour
             else
             {
                 _waveRewardIcons[i].gameObject.SetActive(true);
+                _waveRewardIcons[i].Spell = null;
                 _waveRewardIcons[i].Trinket = _waveRewards.CurrentTrinketRewards[i];
             }
         }
@@ -65,6 +66,18 @@ public class WaveRewardDisplay : MonoBehaviour
 
     private void SetupSpellIcons()
     {
-
+        for (int i = 0; i < 8; i++)
+        {
+            if (i >= _waveRewards.CurrentSpellRewards.Length)
+            {
+                _waveRewardIcons[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                _waveRewardIcons[i].gameObject.SetActive(true);
+                _waveRewardIcons[i].Trinket = null;
+                _waveRewardIcons[i].Spell = _waveRewards.CurrentSpellRewards[i];
+            }
+        }
     }
 }

@@ -15,18 +15,27 @@ public class SpellInventoryHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        _spellInventoryData.OnSpellSelectionChange += HandleSpellChange;
-        HandleSpellChange(_spellInventoryData);
+        _spellInventoryData.OnSpellSelectionChange += HandleSpellSelectionChange;
+        _spellInventoryData.OnSpellsChanged += HandleSpellsChange;
+
+        HandleSpellSelectionChange(_spellInventoryData);
 
         _castingHandler.SpellInventoryData = _spellInventoryData;
     }
 
     private void OnDisable()
     {
-        _spellInventoryData.OnSpellSelectionChange -= HandleSpellChange;
+        _spellInventoryData.OnSpellSelectionChange -= HandleSpellSelectionChange;
+        _spellInventoryData.OnSpellsChanged -= HandleSpellsChange;
     }
 
-    private void HandleSpellChange(SpellInventoryData spelldata)
+    private void HandleSpellSelectionChange(SpellInventoryData spellInv)
+    {
+        _castingHandler.ChangeSpell(_spellInventoryData.SelectedSpell);
+        _playerFire.ChangeSpell(_spellInventoryData.SelectedSpell);
+    }
+
+    private void HandleSpellsChange(SpellInventoryData spellInv, Spell[] oldSpells)
     {
         _castingHandler.ChangeSpell(_spellInventoryData.SelectedSpell);
         _playerFire.ChangeSpell(_spellInventoryData.SelectedSpell);

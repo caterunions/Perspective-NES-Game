@@ -12,6 +12,12 @@ public class WaveRewards : MonoBehaviour
     private WaveRewardDisplay _rewardDisplay;
 
     [SerializeField]
+    private TrinketInventoryData _trinketInv;
+
+    [SerializeField]
+    private SpellInventoryData _spellInv;
+
+    [SerializeField]
     private List<TrinketRewards> _trinketRewardList;
 
     [SerializeField]
@@ -36,21 +42,26 @@ public class WaveRewards : MonoBehaviour
 
     private void GiveRewards(EnemySpawner spawner, int waveNum)
     {
-        List<TrinketRewards> trinketRewards = _trinketRewardList.Where(rew => rew.WaveNumber == waveNum).ToList();
+        TrinketRewards trinketRewards = _trinketRewardList.FirstOrDefault(rew => rew.WaveNumber == waveNum);
 
-        if (trinketRewards.Count == 0)
-        {
-            _spawner.RewardsPending = false;
-            return;
-        }
-
-        _spawner.RewardsPending = true;
-        foreach(TrinketRewards rewards in trinketRewards)
+        if (trinketRewards != null)
         {
             _currentSpellRewards = new Spell[0];
-            _currentTrinketRewards = rewards.GetTrinketOptions();
+            _currentTrinketRewards = trinketRewards.GetTrinketOptions();
             _rewardDisplay.gameObject.SetActive(true);
+
+            _spawner.RewardsPending = true;
         }
-        
+        else
+        {
+            _spawner.RewardsPending = false;
+        }
+    }
+
+    public void SetTrinketSelection(Trinket trinket)
+    {
+        _spawner.RewardsPending = false;
+        _trinketInv.AddTrinket(trinket);
+        _rewardDisplay.gameObject.SetActive(false);
     }
 }

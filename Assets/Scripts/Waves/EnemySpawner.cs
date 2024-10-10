@@ -28,7 +28,20 @@ public class EnemySpawner : MonoBehaviour
         get { return _waveIndex; }
     }
 
-    public bool RewardsPending { get; set; } = false;
+    private bool _rewardsPending = false;
+    public bool RewardsPending 
+    { 
+        get { return _rewardsPending; } 
+        set
+        {
+            if (value == false)
+            {
+                SpawnWave(_waves[_waveIndex]);
+                _waveIndex++;
+            }
+            _rewardsPending = value;
+        }
+    }
 
     public void SpawnEnemy(EnemyBrain enemy, Vector2 position)
     {

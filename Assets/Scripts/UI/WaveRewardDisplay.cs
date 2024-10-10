@@ -12,6 +12,11 @@ public class WaveRewardDisplay : MonoBehaviour
 
     private void OnEnable()
     {
+        foreach(WaveRewardIcon icon in _waveRewardIcons)
+        {
+            icon.OnIconClicked += HandleIconClicked;
+        }
+
         if(_waveRewards.CurrentTrinketRewards.Length > 0)
         {
             SetupTrinketIcons();
@@ -19,6 +24,26 @@ public class WaveRewardDisplay : MonoBehaviour
         else if(_waveRewards.CurrentSpellRewards.Length > 0)
         {
             SetupSpellIcons();
+        }
+    }
+
+    private void OnDisable()
+    {
+        foreach (WaveRewardIcon icon in _waveRewardIcons)
+        {
+            icon.OnIconClicked -= HandleIconClicked;
+        }
+    }
+
+    private void HandleIconClicked(WaveRewardIcon icon, Trinket trinket, Spell spell)
+    {
+        if(trinket != null)
+        {
+            _waveRewards.SetTrinketSelection(trinket);
+        }
+        else if(spell != null)
+        {
+            
         }
     }
 

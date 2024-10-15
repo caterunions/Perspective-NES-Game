@@ -61,10 +61,6 @@ public class WaveRewards : MonoBehaviour
 
             _spawner.RewardsPending = true;
         }
-        else
-        {
-            _spawner.RewardsPending = false;
-        }
     }
 
     public void SetTrinketSelection(Trinket trinket)

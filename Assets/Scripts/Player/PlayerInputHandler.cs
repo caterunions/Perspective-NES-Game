@@ -42,6 +42,8 @@ public class PlayerInputHandler : MonoBehaviour
         _playerInput.actions.FindAction("Cast").canceled += StopCast;
 
         _playerInput.actions.FindAction("Scroll").performed += HandleScroll;
+
+        _playerInput.actions.FindAction("Quit").performed += HandleQuit;
     }
 
     private void OnDisable()
@@ -98,5 +100,10 @@ public class PlayerInputHandler : MonoBehaviour
     private void HandleScroll(InputAction.CallbackContext ctx)
     {
         _spellSelection.HandleScroll(ctx.ReadValue<Vector2>().y);
+    }
+
+    private void HandleQuit(InputAction.CallbackContext ctx)
+    {
+        Application.Quit();
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weightedTrinkets:
   - _trinket: {fileID: 11400000, guid: f5f002d86a2ab3d4782fb128d450f403, type: 2}
-    _weight: 100
+    _weight: 30
   - _trinket: {fileID: 11400000, guid: 09e70204b9cac854298e3955a7a97b53, type: 2}
     _weight: 50
   - _trinket: {fileID: 11400000, guid: 41d4295bf9542bc4b8a199123890dd96, type: 2}

@@ -37,5 +37,10 @@ public class SpellInventoryData : ScriptableObject
         OnSpellsChanged?.Invoke(this, old);
     }
 
+    public void SetSpells(Spell[] spells)
+    {
+        _spells = spells;
+    }
+
 
 }

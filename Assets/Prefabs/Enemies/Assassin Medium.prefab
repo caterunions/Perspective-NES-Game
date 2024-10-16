@@ -160,18 +160,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc014cf24a5b96a40986ebb82842cd1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startDelay: 0.7
+  _startDelay: 0.5
   _endDelay: 0
   _attacks:
-  - _bullet: {fileID: 7163168430147903806, guid: 5526775fc74b83b49be58a2a189432bd, type: 3}
-    _count: 2
-    _countModifier: 0
-    _spread: 20
-    _spreadModifier: 0
+  - _bullet: {fileID: 7163168430147903806, guid: b4277f909110c2f47bd346140a9008b7, type: 3}
+    _count: 1
+    _countModifier: 1
+    _spread: 0
+    _spreadModifier: 40
     _angleOffsetStart: 0
     _angleOffsetIncrease: 0
-    _repetitions: 1
-    _repeatDelay: 0
+    _repetitions: 2
+    _repeatDelay: 0.8
     _endDelay: 0.5
     _startAtFixedAngle: 0
     _fixedAngle: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 1431865957742197303}
   - component: {fileID: 2789249097309524715}
   m_Layer: 6
-  m_Name: Archer Medium
+  m_Name: Assassin Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3d1464daae6bd45aabc78a4c1a2b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minAcceptableDistance: 6
-  _maxAcceptableDistance: 6.5
+  _minAcceptableDistance: 3.5
+  _maxAcceptableDistance: 4
   _stats: {fileID: 8647825259397098311}
   _rb: {fileID: 4101325117751298239}
   _maxOffsetDistance: 3
@@ -296,10 +296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ac3185f36876a4b93b826dbb15fcaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 120
+  _maxHealth: 160
   _regen: 0
   _armor: 10
-  _moveSpeed: 2.4
+  _moveSpeed: 3.4
 --- !u!58 &5267110317207457854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -464,7 +464,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1019053902, guid: 9ad2a2d950d463a4a91ec9740bb48c4c, type: 3}
+  m_Sprite: {fileID: -707998076, guid: d1f50b9d2f360f142b97c644423eca0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -491,13 +491,13 @@ MonoBehaviour:
   _mover: {fileID: 640104761600537122}
   _launcher: {fileID: 6511620800570389823}
   _spriteRenderer: {fileID: 6295104091021322795}
-  _idleSprite: {fileID: -1019053902, guid: 9ad2a2d950d463a4a91ec9740bb48c4c, type: 3}
+  _idleSprite: {fileID: -707998076, guid: d1f50b9d2f360f142b97c644423eca0b, type: 3}
   _walkSprites:
-  - {fileID: 1045441300, guid: 9ad2a2d950d463a4a91ec9740bb48c4c, type: 3}
-  - {fileID: -607913292, guid: 9ad2a2d950d463a4a91ec9740bb48c4c, type: 3}
-  - {fileID: -1019053902, guid: 9ad2a2d950d463a4a91ec9740bb48c4c, type: 3}
-  _walkSpriteDurations: 0.15
-  _attackSprite: {fileID: -1357813257, guid: 9ad2a2d950d463a4a91ec9740bb48c4c, type: 3}
+  - {fileID: -322377221, guid: d1f50b9d2f360f142b97c644423eca0b, type: 3}
+  - {fileID: 788370433, guid: d1f50b9d2f360f142b97c644423eca0b, type: 3}
+  - {fileID: -707998076, guid: d1f50b9d2f360f142b97c644423eca0b, type: 3}
+  _walkSpriteDurations: 0.12
+  _attackSprite: {fileID: 1254481026, guid: d1f50b9d2f360f142b97c644423eca0b, type: 3}
   _attackSpriteDuration: 0.6
 --- !u!1 &8225446816957347286
 GameObject:

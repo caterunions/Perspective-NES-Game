@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42dd96659642e5418d2e446170aa7e9, type: 3}
   m_Name: Weak Burn Damage
   m_EditorClassIdentifier: 
-  _damage: 2
+  _damage: 5
   _damageType: 2
   _stackType: 0
   _ignoreArmor: 0

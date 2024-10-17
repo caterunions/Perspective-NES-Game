@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Flame Burst Temp
   m_EditorClassIdentifier: 
   _attack:
-    _bullet: {fileID: 7163168430147903806, guid: c21592715c3e44a4dae06471f5992d23, type: 3}
+    _bullet: {fileID: 7163168430147903806, guid: f216ae2f288754143920d293e9c9dd0c, type: 3}
     _count: 1
-    _countModifier: 1
-    _spread: 20
-    _spreadModifier: 2
+    _countModifier: 0
+    _spread: 0
+    _spreadModifier: 0
     _angleOffsetStart: 0
     _angleOffsetIncrease: 0
-    _repetitions: 5
-    _repeatDelay: 0.1
+    _repetitions: 1
+    _repeatDelay: 0
     _endDelay: 0
     _startAtFixedAngle: 0
     _fixedAngle: 0
-    _randomAngleOffset: 5
+    _randomAngleOffset: 0

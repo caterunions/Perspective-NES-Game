@@ -1510,6 +1510,9 @@ MonoBehaviour:
   - _waveNumber: 2
     _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
     _optionsCount: 2
+  - _waveNumber: 3
+    _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
+    _optionsCount: 2
 --- !u!1 &600217478
 GameObject:
   m_ObjectHideFlags: 0

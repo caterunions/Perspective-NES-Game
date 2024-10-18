@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a326f04852f2b4b8566c1f6b5009da, type: 3}
+  m_Name: Ice Shard
+  m_EditorClassIdentifier: 
+  _icon: {fileID: -1724156720, guid: 352bee46fbdc69c4b940d8c2ec05eb4e, type: 3}
+  _description: 
+  _associatedTypes: 03000000
+  _basicAttack:
+    _bullet: {fileID: 7163168430147903806, guid: 3fc6a02ee1e4f9a48895130aa8e51035, type: 3}
+    _count: 1
+    _countModifier: 0
+    _spread: 0
+    _spreadModifier: 0
+    _angleOffsetStart: 0
+    _angleOffsetIncrease: 0
+    _repetitions: 3
+    _repeatDelay: 0.08
+    _endDelay: 0.3
+    _startAtFixedAngle: 0
+    _fixedAngle: 0
+    _randomAngleOffset: 15
+  _manaCost: 0
+  _cooldown: 0
+  _canBeHeldDown: 0
+  _manaDrain: 0
+  _spellStartEffects: []
+  _spellSustainEffects: []
+  _spellEndEffects: []

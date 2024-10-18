@@ -375,7 +375,7 @@ MonoBehaviour:
   _startingSpells:
   - {fileID: 11400000, guid: 64a9e0efef3d86f478ad714ec93a12ae, type: 2}
   - {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b58c693bcbfc90a4c9ca50404dcd561a, type: 2}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &1091297292591825541

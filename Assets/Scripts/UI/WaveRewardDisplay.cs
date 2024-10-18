@@ -16,7 +16,9 @@ public class WaveRewardDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        foreach(WaveRewardIcon icon in _waveRewardIcons)
+        _description.text = "";
+
+        foreach (WaveRewardIcon icon in _waveRewardIcons)
         {
             icon.OnIconClicked += HandleIconClicked;
             icon.OnIconEntered += HandleIconEntered;

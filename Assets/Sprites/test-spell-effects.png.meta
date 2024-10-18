@@ -231,7 +231,7 @@ TextureImporter:
         width: 46
         height: 139
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,6 +239,27 @@ TextureImporter:
       bones: []
       spriteID: a5f6323c05cc2014bb98586dcf2e1ab3
       internalID: 401021841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-effects_7
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 249
+        width: 102
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5430ffce99c0b43891a34d4d57b551
+      internalID: 1499955575
       vertices: []
       indices: 
       edges: []
@@ -261,6 +282,7 @@ TextureImporter:
       test-spell-effects_4: -99614240
       test-spell-effects_5: -1968820158
       test-spell-effects_6: 401021841
+      test-spell-effects_7: 1499955575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

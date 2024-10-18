@@ -1365,7 +1365,7 @@ MonoBehaviour:
       _spawnInterval: 2
       _startDelay: 0
     - _spawnPoint: {fileID: 813420175}
-      _enemy: {fileID: 4283499290640475370, guid: 0dddc729a081dbe48b48fc4aae6e0c75, type: 3}
+      _enemy: {fileID: 4283499290640475370, guid: ea7cf11c7ce16f147af1c3fc83e9528a, type: 3}
       _count: 1
       _spawnInterval: 2
       _startDelay: 0

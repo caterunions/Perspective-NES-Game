@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1707520358571533726}
   - component: {fileID: 6218275761592792351}
   m_Layer: 0
-  m_Name: Assassin_Knife
+  m_Name: Assassin_Knife Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 101349521317059725}
@@ -85,7 +85,7 @@ MonoBehaviour:
   _range: 10
   _collider: {fileID: 8814743332122613704}
   _destroyOnWalls: 1
-  _damage: 10
+  _damage: 15
   _damageType: 0
   _procCoefficient: 1
   _armorPiercing: 0
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -144527516, guid: 4a75495a3b408b941b11832f57fa2ed2, type: 3}
+  m_Sprite: {fileID: 319004367, guid: 4a75495a3b408b941b11832f57fa2ed2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -495,8 +495,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.5019608, g: 0.33333334, b: 0.20784315, a: 0.78431374}
-      key1: {r: 0.21176472, g: 0.121568635, b: 0.054901965, a: 0}
+      key0: {r: 1, g: 1, b: 1, a: 0.39215687}
+      key1: {r: 0.57254905, g: 0.6313726, b: 0.7254902, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}

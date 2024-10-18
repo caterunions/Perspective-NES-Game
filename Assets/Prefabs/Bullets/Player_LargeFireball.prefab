@@ -119,6 +119,7 @@ MonoBehaviour:
   - {fileID: 2812071493366618880}
   - {fileID: 8032417775487034896}
   - {fileID: 983647678226092882}
+  - {fileID: 8498112347921668810}
   _solidObjectPierceCount: 0
   _range: 10
   _collider: {fileID: 6292511271495921943}

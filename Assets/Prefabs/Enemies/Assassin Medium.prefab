@@ -163,7 +163,7 @@ MonoBehaviour:
   _startDelay: 0.5
   _endDelay: 0
   _attacks:
-  - _bullet: {fileID: 7163168430147903806, guid: b4277f909110c2f47bd346140a9008b7, type: 3}
+  - _bullet: {fileID: 7163168430147903806, guid: 2df8f8718457f6649ba5db2b5c125726, type: 3}
     _count: 1
     _countModifier: 1
     _spread: 0

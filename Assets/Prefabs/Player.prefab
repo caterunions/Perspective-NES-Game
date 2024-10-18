@@ -343,7 +343,7 @@ MonoBehaviour:
   _playerFire: {fileID: 7958128949992578416}
   _moveSpeedMultWhenFiring: 0.5
   _maxMana: 100
-  _manaRegen: 5
+  _manaRegen: 2.5
 --- !u!114 &6152602499993257223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,8 +373,8 @@ MonoBehaviour:
   _playerFire: {fileID: 7958128949992578416}
   _castingHandler: {fileID: 1091297292591825541}
   _startingSpells:
+  - {fileID: 11400000, guid: 64a9e0efef3d86f478ad714ec93a12ae, type: 2}
   - {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

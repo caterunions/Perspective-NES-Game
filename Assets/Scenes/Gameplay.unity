@@ -1361,17 +1361,12 @@ MonoBehaviour:
   - _enemyWaveSpawns:
     - _spawnPoint: {fileID: 991817003}
       _enemy: {fileID: 4283499290640475370, guid: f131aec0cbace64428f031c45fb366d8, type: 3}
-      _count: 2
+      _count: 1
       _spawnInterval: 2
       _startDelay: 0
     - _spawnPoint: {fileID: 813420175}
       _enemy: {fileID: 4283499290640475370, guid: 0dddc729a081dbe48b48fc4aae6e0c75, type: 3}
-      _count: 2
-      _spawnInterval: 2
-      _startDelay: 0
-    - _spawnPoint: {fileID: 813420175}
-      _enemy: {fileID: 4283499290640475370, guid: 7f1936fe352dc994dae827a10c7ad210, type: 3}
-      _count: 2
+      _count: 1
       _spawnInterval: 2
       _startDelay: 0
   - _enemyWaveSpawns:
@@ -1510,13 +1505,13 @@ MonoBehaviour:
   _trinketInv: {fileID: 11400000, guid: ae0c07748cbf03f47be94b63c37e23cf, type: 2}
   _spellInv: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
   _trinketRewardList:
-  - _waveNumber: 1
-    _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
-    _optionsCount: 5
-  _spellRewardList:
   - _waveNumber: 2
+    _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
+    _optionsCount: 1
+  _spellRewardList:
+  - _waveNumber: 1
     _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
-    _optionsCount: 2
+    _optionsCount: 1
   - _waveNumber: 3
     _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
     _optionsCount: 2
@@ -2480,7 +2475,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138437980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2489,8 +2484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0014935, y: -0.0014954}
-  m_SizeDelta: {x: 133.31, y: 223.29}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 125, y: 223.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1138437982
 CanvasRenderer:
@@ -2547,25 +2542,25 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 36
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 10
-  m_fontSizeMax: 20
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 8
+  m_fontSizeMax: 15
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 2
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1

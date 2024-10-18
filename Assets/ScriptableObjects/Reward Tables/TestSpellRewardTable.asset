@@ -13,11 +13,5 @@ MonoBehaviour:
   m_Name: TestSpellRewardTable
   m_EditorClassIdentifier: 
   _weightedSpells:
-  - _spell: {fileID: 11400000, guid: 6e043ee83d94c404d92f0d84a8242aff, type: 2}
-    _weight: 5
   - _spell: {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
-    _weight: 5
-  - _spell: {fileID: 11400000, guid: 140648c2d1702654ab11758103538b1a, type: 2}
-    _weight: 5
-  - _spell: {fileID: 11400000, guid: 15756a81729cc5e43b2db025eb6f89a5, type: 2}
     _weight: 5

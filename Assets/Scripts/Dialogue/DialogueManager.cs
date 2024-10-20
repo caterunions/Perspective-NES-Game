@@ -26,11 +26,9 @@ public class DialogueManager : MonoBehaviour
     private bool _canContinueDia = false;
     private bool _dialogueIsPlaying = false;
    
-    // private int _currentChar; // current character in the line
     [Header("Typing Speed")]
     [SerializeField]
     private float _typingSpeed;
-    // private int _lineLimit; // max num of characters before going to next line
 
     private static DialogueManager instance;
 
@@ -92,7 +90,6 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogue()
     {
         yield return new WaitForSeconds(0.2f);
-        // Debug.Log("exiting dialogue");
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _displayText.text = "";
@@ -100,7 +97,6 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueDialogue()
     {
-        //Debug.Log("continuing dialogue");
         if(_allLines[_currentLine] != null)
         {
             if (_currentLine < _allLines.Length - 1)
@@ -122,7 +118,6 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator DisplayLine()
     {
         _displayText.text = ""; // empty text
-        //Debug.Log("displaying dialogue");
         _continueIcon.SetActive(false); // hide item
         _canContinueDia = false;
         // type each letter one at a time
@@ -132,7 +127,6 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(_typingSpeed);
         }
         _continueIcon.SetActive(true);
-        //_currentLine++;
         // dialogue can continue
         _canContinueDia = true;
     }

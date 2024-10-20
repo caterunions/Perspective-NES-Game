@@ -2,26 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
+// this script will be in charge of:
+// 1. splitting the .txt file into a string array
+// given by a dialogue trigger.
+// 2. type out each character in the current line
+// 3. player input for continuing or exiting dialogue
 public class DialogueManager : MonoBehaviour
 {
-    [Header("UI")]
+    [Header("Dialogue UI")]
     [SerializeField]
     private GameObject _dialoguePanel;
     [SerializeField]
-    private TextMeshProUGUI _dialogueText;
+    private TextMeshProUGUI _displayText;
     [SerializeField]
     private GameObject _continueIcon; // displays once line is completed
 
-    private TextAsset _dialogue;
-    private string[] _allLines; // array of each line in the text file
-    private int _lineLength; // length of current line
-
+    private TextAsset _currentDialogue;
+    private Coroutine _displayLineCo;
+    private string[] _allLines;
     private int _currentLine; // line in text file
-    private int _currentChar; // current character in the line
-    private bool _dialogueIsPlaying;
-    [SerializeField] // remove once _lineLimit is figured out
-    private int _lineLimit; // max num of characters before going to next line
+    private bool _canContinueDia = false;
+    private bool _dialogueIsPlaying = false;
+   
+    // private int _currentChar; // current character in the line
+    [Header("Typing Speed")]
+    [SerializeField]
+    private float _typingSpeed;
+    // private int _lineLimit; // max num of characters before going to next line
 
     private static DialogueManager instance;
 
@@ -34,18 +43,17 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    private static DialogueManager GetInstance()
+    public static DialogueManager GetInstance()
     {
-        
         return instance;
     }
 
-
     private void Start()
     {
+        _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _continueIcon.SetActive(false);
-        _dialogueIsPlaying = false;
+        _displayText.text = string.Empty;
     }
 
     private void Update()
@@ -54,31 +62,78 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
+        if (_canContinueDia && Input.GetKeyDown(KeyCode.Space) && _dialogueIsPlaying)
+        {
+            ContinueDialogue();
+        }
     }
 
-    public void EnterDialogueMode(TextAsset DialogueText)
+    public void StartDialogue(TextAsset _textDoc)
     {
-        Debug.Log("EnterDialogueMode");
-        // * remember to add this later:
-        // pass a bool to check if auto continue dialogue is enabled or not
-        // otherwise it is not auto
-        _dialogue = new TextAsset(DialogueText.text);
+        _currentLine = 0;
+        _currentDialogue = new TextAsset(_textDoc.text);
+        // get dialogue lines and put it into an array
+        _allLines = _currentDialogue.text.Split(">> ");
         _dialogueIsPlaying = true;
         _dialoguePanel.SetActive(true);
+        GetDialogueIndex();
+        ContinueDialogue();
+    }
 
-        _dialogueText.text = _dialogue.ToString();
+    private void GetDialogueIndex()
+    {
+        for (int i = 0; i < _allLines.Length; i++)
+        {
+            i = _currentLine;
+            break;
+        }
+    }
+
+    private IEnumerator ExitDialogue()
+    {
+        yield return new WaitForSeconds(0.2f);
+        // Debug.Log("exiting dialogue");
+        _dialogueIsPlaying = false;
+        _dialoguePanel.SetActive(false);
+        _displayText.text = "";
     }
 
     private void ContinueDialogue()
     {
-        
-
+        //Debug.Log("continuing dialogue");
+        if(_allLines[_currentLine] != null)
+        {
+            if (_currentLine < _allLines.Length - 1)
+            {
+                if(_displayLineCo != null)
+                {
+                    StopCoroutine(_displayLineCo);
+                }
+                _currentLine++;
+                _displayLineCo = StartCoroutine(DisplayLine());
+            }
+            else
+            {
+                StartCoroutine(ExitDialogue());
+            }
+        } 
     }
 
-    private void ExitDialogueMode()
+    private IEnumerator DisplayLine()
     {
-        _dialogueIsPlaying = false;
-        _dialoguePanel?.SetActive(false);
-        _dialogueText.text = "";
+        _displayText.text = ""; // empty text
+        //Debug.Log("displaying dialogue");
+        _continueIcon.SetActive(false); // hide item
+        _canContinueDia = false;
+        // type each letter one at a time
+        foreach (char letter in _allLines[_currentLine].ToCharArray())
+        {
+            _displayText.text += letter;
+            yield return new WaitForSeconds(_typingSpeed);
+        }
+        _continueIcon.SetActive(true);
+        //_currentLine++;
+        // dialogue can continue
+        _canContinueDia = true;
     }
 }

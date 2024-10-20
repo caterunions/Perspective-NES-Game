@@ -6,32 +6,18 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField]
     private TextAsset _dialogue;
-
     [SerializeField]
     private bool _dialogueOnStart;
-
     [SerializeField]
     private DialogueManager _dialogueManager;
 
-    private void Awake()
+    private bool _dialogueIsPlaying = false;
+    private void Update ()
     {
-         _dialogueManager = GetComponent<DialogueManager>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    { 
-       
-
-        if (_dialogueOnStart)
+        if (_dialogueOnStart && !_dialogueIsPlaying)
         {
-            _dialogueManager.EnterDialogueMode(_dialogue);
+            _dialogueManager.StartDialogue(_dialogue);
+            _dialogueIsPlaying = true;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

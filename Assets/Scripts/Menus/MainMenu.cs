@@ -11,7 +11,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private int _playScene;
     [SerializeField]
+    private GameObject _titleScreen;
+    [SerializeField]
     private GameObject _controlsMenu;
+
+    private void Start()
+    {
+        _controlsMenu.SetActive(false);
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(_playScene, LoadSceneMode.Single);
@@ -23,9 +30,11 @@ public class MainMenu : MonoBehaviour
     public void ShowControls()
     {
         _controlsMenu.SetActive(true);
+        _titleScreen.SetActive(false);
     }
     public void HideControls()
     {
         _controlsMenu.SetActive(false);
+        _titleScreen.SetActive(true);
     }
 }

@@ -32,11 +32,11 @@ public class ControlsMenu : MonoBehaviour
     private void Update()
     {
         GetSwitch();
-        if(_index >= _maxindex)
+        if(_index > _maxindex)
         {
             _index = 0;
         }
-        else if (_index <= -1)
+        else if (_index < 0)
         {
             _index = _maxindex;
         }

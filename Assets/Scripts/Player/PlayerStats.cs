@@ -11,13 +11,16 @@ public class PlayerStats : EntityStats
     private PlayerFire _playerFire;
 
     [SerializeField]
+    private CastingHandler _castingHandler;
+
+    [SerializeField]
     private float _moveSpeedMultWhenFiring = 0.5f;
 
     public float CurrentMoveSpeed
     {
         get 
         {
-            if (_playerFire.Firing) return MoveSpeed * _moveSpeedMultWhenFiring;
+            if (_playerFire.Firing || _castingHandler.CastingSpell) return MoveSpeed * _moveSpeedMultWhenFiring;
             return MoveSpeed;
         }
     }

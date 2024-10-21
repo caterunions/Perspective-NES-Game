@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42dd96659642e5418d2e446170aa7e9, type: 3}
-  m_Name: TestSlow damage
+  m_Script: {fileID: 11500000, guid: c0bb887156d8c214487720e838e3e026, type: 3}
+  m_Name: FreezeSlow Color
   m_EditorClassIdentifier: 
-  _damage: 1
-  _damageType: 5
-  _stackType: 0
+  _color: {r: 0.6556604, g: 0.93195444, b: 1, a: 1}
+  _duration: 0.19

@@ -29,10 +29,13 @@ MonoBehaviour:
     _startAtFixedAngle: 0
     _fixedAngle: 0
     _randomAngleOffset: 15
-  _manaCost: 0
-  _cooldown: 0
-  _canBeHeldDown: 0
-  _manaDrain: 0
+  _manaCost: 10
+  _cooldown: 1
+  _canBeHeldDown: 1
+  _manaDrain: 3
   _spellStartEffects: []
-  _spellSustainEffects: []
+  _spellSustainEffects:
+  - {fileID: 11400000, guid: 50556b9b28f22cc4e968ae55f9bf714b, type: 2}
+  - {fileID: 11400000, guid: 25bce3c8fe115104c8cfe637ba5d09f3, type: 2}
+  - {fileID: 11400000, guid: 92ecacfc9c4fe5646a3f7b7844261ca8, type: 2}
   _spellEndEffects: []

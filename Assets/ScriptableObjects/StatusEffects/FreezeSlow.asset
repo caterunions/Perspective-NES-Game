@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d24e4dc065a9842a679bf7c17d9d56, type: 3}
-  m_Name: TestSlow
+  m_Name: FreezeSlow
   m_EditorClassIdentifier: 
   _icon: {fileID: 0}
   _statBoosts:
   - _statIncrease: 5
     _type: 1
     _source: 1
-    _statIncreaseAmount: -0.1
-  _stackable: 1
-  _stackType: 1
-  _tickRate: 0.5
+    _statIncreaseAmount: -0.5
+  - _statIncrease: 3
+    _type: 1
+    _source: 1
+    _statIncreaseAmount: -0.5
+  _stackable: 0
+  _stackType: 0
+  _tickRate: 0.2
   _procs:
-  - {fileID: 11400000, guid: df3ffacf8a4f6a24b92822796a0fac3f, type: 2}
+  - {fileID: 11400000, guid: e599b6ca6c24b3f4f9d1e5d550d40dcd, type: 2}

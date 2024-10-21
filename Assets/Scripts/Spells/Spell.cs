@@ -12,6 +12,10 @@ public class Spell : ScriptableObject
     private Sprite _icon;
     public Sprite Icon => _icon;
 
+    [SerializeField, TextArea(15, 20)]
+    protected string _description;
+    public string Description => _description;
+
     [SerializeField]
     private DamageTypes[] _associatedTypes;
     public DamageTypes[] AssociatedTypes => _associatedTypes;

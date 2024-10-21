@@ -61,10 +61,6 @@ public class WaveRewards : MonoBehaviour
 
             _spawner.RewardsPending = true;
         }
-        else
-        {
-            _spawner.RewardsPending = false;
-        }
     }
 
     public void SetTrinketSelection(Trinket trinket)
@@ -80,8 +76,13 @@ public class WaveRewards : MonoBehaviour
         int spellSlotToFill = -1;
         for(int i = 0; i < _spellInv.Spells.Length; i++)
         {
-            if (_spellInv.Spells[i] == null) spellSlotToFill = i;
+            if (_spellInv.Spells[i] == null)
+            {
+                spellSlotToFill = i;
+                break;
+            }
         }
+        Debug.Log(spellSlotToFill);
         if (spellSlotToFill >= 0) _spellInv.SetCastingSpellSlot(spellSlotToFill, spell);
         else
         {

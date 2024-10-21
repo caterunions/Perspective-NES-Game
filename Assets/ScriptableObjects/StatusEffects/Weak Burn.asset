@@ -19,3 +19,4 @@ MonoBehaviour:
   _tickRate: 0.4
   _procs:
   - {fileID: 11400000, guid: 868ff2bd794479045b1d9ae897c5ff11, type: 2}
+  - {fileID: 11400000, guid: 7baedb1aa67e9ef40ad2381e4c05d753, type: 2}

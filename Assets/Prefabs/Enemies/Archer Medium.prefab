@@ -163,7 +163,7 @@ MonoBehaviour:
   _startDelay: 0.7
   _endDelay: 0
   _attacks:
-  - _bullet: {fileID: 7163168430147903806, guid: 5526775fc74b83b49be58a2a189432bd, type: 3}
+  - _bullet: {fileID: 7163168430147903806, guid: b352bbc8352aabd49af55d5b7a23477d, type: 3}
     _count: 2
     _countModifier: 0
     _spread: 20
@@ -212,7 +212,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6139258095972207967}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ac3185f36876a4b93b826dbb15fcaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 120
   _regen: 0
   _armor: 10
   _moveSpeed: 2.4

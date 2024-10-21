@@ -28,6 +28,13 @@ public class SpellDisplay : MonoBehaviour
     private void OnDisable()
     {
         _spellInventoryData.OnSpellsChanged -= HandleCastingSpellsChange;
+
+        _spellInventoryData.OnSpellSelectionChange -= HandleSpellSelectionChange;
+    }
+
+    private void Start()
+    {
+        HandleCastingSpellsChange(_spellInventoryData, new Spell[_spellInventoryData.Spells.Length]);
     }
 
     private void HandleCastingSpellsChange(SpellInventoryData spellData, Spell[] oldCastingSpells)

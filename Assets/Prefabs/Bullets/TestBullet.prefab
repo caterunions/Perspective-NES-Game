@@ -123,10 +123,10 @@ MonoBehaviour:
   _behaviours:
   - {fileID: 100937903052763978}
   _solidObjectPierceCount: 0
-  _range: 12
+  _range: 10
   _collider: {fileID: 826484786587837382}
   _destroyOnWalls: 1
-  _damage: 1
+  _damage: 10
   _damageType: 0
   _procCoefficient: 1
   _armorPiercing: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startVelocity: 5
-  _endVelocity: 15
+  _endVelocity: 9
   _rampTime: 0.5
 --- !u!1 &2552077596774974351
 GameObject:

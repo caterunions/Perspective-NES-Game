@@ -12,12 +12,24 @@ public class SinWaveMovement : BulletBehaviour
 
     private float _timeAlive;
 
+    [SerializeField]
+    private bool _useStartDirection = false;
+
+    private Vector2 _dir;
+
+    private void OnEnable()
+    {
+        if(_useStartDirection) _dir = transform.right;
+    }
+
     private void Update()
     {
+        if (!_useStartDirection) _dir = transform.right;
+
         _timeAlive += Time.deltaTime;
         transform.position = 
             new Vector2(transform.position.x, transform.position.y) + 
-            new Vector2(transform.right.x, transform.right.y) * 
+            _dir * 
             Mathf.Cos(_timeAlive * _frequency) * (_magnitude * Time.deltaTime);
     }
 }

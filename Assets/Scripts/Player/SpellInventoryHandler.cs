@@ -13,8 +13,13 @@ public class SpellInventoryHandler : MonoBehaviour
     [SerializeField]
     private CastingHandler _castingHandler;
 
+    [SerializeField]
+    private Spell[] _startingSpells = new Spell[5];
+
     private void OnEnable()
     {
+        _spellInventoryData.SetSpells(_startingSpells);
+
         _spellInventoryData.OnSpellSelectionChange += HandleSpellSelectionChange;
         _spellInventoryData.OnSpellsChanged += HandleSpellsChange;
 

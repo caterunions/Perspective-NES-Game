@@ -13,7 +13,7 @@ public class Boomerang : BulletBehaviour
             _hasBoomeranged = true;
             transform.RotateAround(transform.position, new Vector3(0, 0, 1), 180f);
         }
-        else if(_hasBoomeranged && bullet.DistanceTravelled <= 0.1f)
+        else if(_hasBoomeranged && bullet.DistanceTravelled <= 0.5f)
         {
             Destroy(gameObject);
         }

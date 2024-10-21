@@ -5,9 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class WaveRewardIcon : MonoBehaviour, IPointerClickHandler
+public class WaveRewardIcon : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public event Action<WaveRewardIcon, Trinket, Spell> OnIconClicked;
+    public event Action<WaveRewardIcon, Trinket, Spell> OnIconEntered;
+    public event Action<WaveRewardIcon, Trinket, Spell> OnIconExit;
 
     [SerializeField]
     private Image _image;
@@ -37,5 +39,15 @@ public class WaveRewardIcon : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         OnIconClicked?.Invoke(this, Trinket, Spell);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnIconEntered?.Invoke(this, Trinket, Spell);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnIconExit?.Invoke(this, Trinket, Spell);
     }
 }

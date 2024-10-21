@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 3522179583991558896}
   - component: {fileID: 3142030639889689206}
   - component: {fileID: 7531784885383870236}
+  - component: {fileID: 7430821085582314075}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -342,7 +343,7 @@ MonoBehaviour:
   _playerFire: {fileID: 7958128949992578416}
   _moveSpeedMultWhenFiring: 0.5
   _maxMana: 100
-  _manaRegen: 5
+  _manaRegen: 2.5
 --- !u!114 &6152602499993257223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +372,12 @@ MonoBehaviour:
   _spellInventoryData: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
   _playerFire: {fileID: 7958128949992578416}
   _castingHandler: {fileID: 1091297292591825541}
+  _startingSpells:
+  - {fileID: 11400000, guid: 64a9e0efef3d86f478ad714ec93a12ae, type: 2}
+  - {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
+  - {fileID: 11400000, guid: b58c693bcbfc90a4c9ca50404dcd561a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1091297292591825541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +486,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6092628c5a1328e40adf96b4613376da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7430821085582314075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002353487323383801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588eb666f14b58b489dad52843a0bf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageNumberObj: {fileID: 5107962943194465923, guid: 4e53591b4deb0fa49bebf2cc2e5a43ef, type: 3}
 --- !u!1001 &4826810268124119282
 PrefabInstance:
   m_ObjectHideFlags: 0

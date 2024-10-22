@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);
+        SceneManager.LoadScene("DialogueTest", LoadSceneMode.Single);
     }
     public void QuitGame()
     {

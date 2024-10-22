@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.IO;
+// v temporary. only for playtest v
+using UnityEngine.SceneManagement;
 
 // this script will be in charge of:
 // 1. splitting the .txt file into a string array
@@ -93,6 +95,8 @@ public class DialogueManager : MonoBehaviour
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _displayText.text = "";
+        // v temporary. only for playtest v
+        SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);
     }
 
     private void ContinueDialogue()

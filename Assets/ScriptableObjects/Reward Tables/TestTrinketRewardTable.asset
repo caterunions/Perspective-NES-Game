@@ -31,3 +31,15 @@ MonoBehaviour:
     _weight: 10
   - _trinket: {fileID: 11400000, guid: 7252d4889585bbb418b8eb63b04aa346, type: 2}
     _weight: 10
+  - _trinket: {fileID: 11400000, guid: 36976d736efa1364f8184c4e2c9982ae, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 77a57631bc38ec14e86a5f1c0e5f9ac6, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 0ce72d6d0c6af484eba9f1e4d0006664, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 4b3c94cf0f614044eb39485114038b23, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 5620dd556cc5a0240b9a9980a847a8cd, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 423076c7816b4a240bbc3258af39747c, type: 2}
+    _weight: 10

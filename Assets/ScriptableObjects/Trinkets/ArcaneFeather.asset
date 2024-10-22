@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eb85521eda1e0c4c82fc90648cd6849, type: 3}
-  m_Name: TestTrinket
+  m_Name: ArcaneFeather
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 21300000, guid: a57934a683dd3f24d9da7869faf66bd8, type: 3}
-  _displayName: glorp
-  _description: 
+  _sprite: {fileID: 21300000, guid: 352224d4e7b926344ae3d0f074e58e48, type: 3}
+  _description: '<size=20><color=#FFFFFF>Arcane Feather</color></size>
+
+    <color=#fffa96>
+
+    +10%
+    Arcane Damage
+
+    +10% Move Speed'
   _rarity: 0
   _statBoosts:
-  - _statIncrease: 0
+  - _statIncrease: 6
     _type: 0
     _source: 0
-    _statIncreaseAmount: 20
-  - _statIncrease: 7
+    _statIncreaseAmount: 0.1
+  - _statIncrease: 5
     _type: 1
     _source: 0
-    _statIncreaseAmount: 2
-  _trinketEffects:
-  - _id: 47dd40ae-b515-4df6-a4dc-e35039cb5c58
-    _trigger: 3
-    _damageType: 2
-    _chance: 10
-    _activations:
-    - {fileID: 11400000, guid: fb0a1f95c9886614ba5bbb1fdbc7151e, type: 2}
+    _statIncreaseAmount: 0.1
+  _trinketEffects: []

@@ -12,6 +12,10 @@ public class SpellRewards
     public int WaveNumber => _waveNumber;
 
     [SerializeField]
+    private List<Spell> _rewardSpells;
+    public List<Spell> RewardSpells => _rewardSpells;
+
+    [SerializeField]
     private SpellRewardTable _rewardTable;
 
     [SerializeField, Range(1, 8)]

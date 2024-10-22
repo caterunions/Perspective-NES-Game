@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb85521eda1e0c4c82fc90648cd6849, type: 3}
+  m_Name: ArcanePotion
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1942235043, guid: 8a1f49b68a1a78a4da72dfd054e45086, type: 3}
+  _description: '<size=20><color=#FFFFFF>Arcane Potion</color></size>
+
+    <color=#fffa96>
+
+    15%
+    Chance to fire an Arcane Bolt when attacking.'
+  _rarity: 0
+  _statBoosts: []
+  _trinketEffects:
+  - _id: b63a3df3-c379-4529-8d5d-dc6d9356641d
+    _trigger: 2
+    _damageType: 0
+    _chance: 15
+    _activations:
+    - {fileID: 11400000, guid: 4382ece0f49b4fb46bd87b2125a3cada, type: 2}

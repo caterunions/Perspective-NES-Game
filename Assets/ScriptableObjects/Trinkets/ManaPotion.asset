@@ -10,15 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eb85521eda1e0c4c82fc90648cd6849, type: 3}
-  m_Name: BloodCharm
+  m_Name: ManaPotion
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 964168958, guid: 3524079c29e46ae4b9c47013a4bfb1dd, type: 3}
-  _displayName: Blood Charm
-  _description: +10% Blood Damage
+  _sprite: {fileID: -721639052, guid: 8a1f49b68a1a78a4da72dfd054e45086, type: 3}
+  _description: '<size=20><color=#FFFFFF>Mana Potion</color></size>
+
+    <color=#fffa96>
+
+    +1.5
+    Mana Regen
+
+    +20 Max Mana'
   _rarity: 0
   _statBoosts:
-  - _statIncrease: 11
+  - _statIncrease: 13
     _type: 0
     _source: 0
-    _statIncreaseAmount: 0.1
+    _statIncreaseAmount: 1.5
+  - _statIncrease: 12
+    _type: 0
+    _source: 0
+    _statIncreaseAmount: 20
   _trinketEffects: []

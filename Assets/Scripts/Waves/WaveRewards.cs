@@ -47,7 +47,7 @@ public class WaveRewards : MonoBehaviour
 
         if (spellRewards != null)
         {
-            _currentSpellRewards = spellRewards.GetSpellOptions();
+            _currentSpellRewards = spellRewards.RewardSpells.Where(spell => !_spellInv.Spells.Contains(spell)).ToArray();
             _currentTrinketRewards = new Trinket[0];
             _rewardDisplay.gameObject.SetActive(true);
 

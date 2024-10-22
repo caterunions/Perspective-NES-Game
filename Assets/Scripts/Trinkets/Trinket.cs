@@ -12,10 +12,6 @@ public class Trinket : ScriptableObject
     private Sprite _sprite;
     public Sprite Sprite => _sprite;
 
-    [SerializeField]
-    private string _displayName;
-    public string DisplayName => _displayName;
-
     [SerializeField, TextArea(15, 20)]
     protected string _description;
     public string Description => _description;

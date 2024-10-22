@@ -13,12 +13,22 @@ MonoBehaviour:
   m_Name: IceCharm
   m_EditorClassIdentifier: 
   _sprite: {fileID: -929265019, guid: 3524079c29e46ae4b9c47013a4bfb1dd, type: 3}
-  _displayName: Ice Charm
-  _description: +10% Ice Damage
+  _description: '<size=20><color=#FFFFFF>Ice Charm</color></size>
+
+    <color=#fffa96>
+
+    +10%
+    Ice Damage
+
+    +1 Mana Regen'
   _rarity: 0
   _statBoosts:
   - _statIncrease: 8
     _type: 0
     _source: 0
     _statIncreaseAmount: 0.1
+  - _statIncrease: 13
+    _type: 0
+    _source: 0
+    _statIncreaseAmount: 1
   _trinketEffects: []

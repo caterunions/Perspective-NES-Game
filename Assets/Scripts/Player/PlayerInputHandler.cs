@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -104,6 +105,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void HandleQuit(InputAction.CallbackContext ctx)
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }

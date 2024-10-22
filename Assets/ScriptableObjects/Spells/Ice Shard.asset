@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: Ice Shard
   m_EditorClassIdentifier: 
   _icon: {fileID: -1724156720, guid: 352bee46fbdc69c4b940d8c2ec05eb4e, type: 3}
-  _description: 
+  _description: '<size=20><color=#42D0FF>Ice Shard</color></size>
+
+
+    <size=15>Basic
+    Attack:</size>
+
+    <color=#BBB>Fires a flurry of ice shards that do <color=#42D0FF>Ice</color>
+    damage.</color>
+
+
+    <size=15>For 10 Mana:</size>
+
+    <color=#BBB>Hold down
+    the cast button to drain 3 mana per second and release a blizzard that does <color=#42D0FF>Ice</color>
+    damage and <color=#42D0FF>Slows</color> enemies.'
   _associatedTypes: 03000000
   _basicAttack:
     _bullet: {fileID: 7163168430147903806, guid: 3fc6a02ee1e4f9a48895130aa8e51035, type: 3}

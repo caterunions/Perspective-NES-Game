@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4715752139448766407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571240779858439158}
   - component: {fileID: 6461753731340861664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1 Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1885315216056564837}
   - component: {fileID: 4730860314844472587}
   - component: {fileID: 3420005993845029434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Test Summon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694197616062206093}
   - component: {fileID: 5419948263141197751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 8568521221500041573}
   - component: {fileID: 56608747466915394}
   - component: {fileID: 1549841667813867154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

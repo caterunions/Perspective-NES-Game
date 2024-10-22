@@ -10,26 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eb85521eda1e0c4c82fc90648cd6849, type: 3}
-  m_Name: FireCharm
+  m_Name: EndurancePotion
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 859940019, guid: 3524079c29e46ae4b9c47013a4bfb1dd, type: 3}
-  _displayName: Fire Charm
-  _description: '<size=20><color=#FFFFFF>Fire Charm</color></size>
+  _sprite: {fileID: 2142594063, guid: 8a1f49b68a1a78a4da72dfd054e45086, type: 3}
+  _description: '<size=20><color=#FFFFFF>Endurance Potion</color></size>
 
     <color=#fffa96>
 
-    +10%
-    Fire Damage
+    +10
+    Armor
 
-    +1 Mana Regen'
+    +25 Max Health
+
+    <color=#ffc9c9>-10% Move Speed'
   _rarity: 0
   _statBoosts:
-  - _statIncrease: 7
+  - _statIncrease: 4
     _type: 0
     _source: 0
-    _statIncreaseAmount: 0.1
-  - _statIncrease: 13
+    _statIncreaseAmount: 10
+  - _statIncrease: 0
     _type: 0
     _source: 0
-    _statIncreaseAmount: 1
+    _statIncreaseAmount: 25
+  - _statIncrease: 5
+    _type: 1
+    _source: 0
+    _statIncreaseAmount: -0.1
   _trinketEffects: []

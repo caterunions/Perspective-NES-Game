@@ -436,14 +436,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7002353487323383801}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -454,7 +454,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2949921028267124669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,8 +535,8 @@ MonoBehaviour:
   _castingHandler: {fileID: 1091297292591825541}
   _startingSpells:
   - {fileID: 11400000, guid: 64a9e0efef3d86f478ad714ec93a12ae, type: 2}
-  - {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
-  - {fileID: 11400000, guid: b58c693bcbfc90a4c9ca50404dcd561a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &1091297292591825541

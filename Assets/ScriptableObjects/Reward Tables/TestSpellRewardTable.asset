@@ -15,3 +15,5 @@ MonoBehaviour:
   _weightedSpells:
   - _spell: {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
     _weight: 5
+  - _spell: {fileID: 11400000, guid: b58c693bcbfc90a4c9ca50404dcd561a, type: 2}
+    _weight: 5

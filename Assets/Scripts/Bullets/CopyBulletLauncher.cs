@@ -17,7 +17,7 @@ public class CopyBulletLauncher : BulletLauncher
         _launcherToCopy.OnPatternLaunch += CopyLaunch;
     }
 
-    private void CopyLaunch(BulletLauncher launcher, PatternData pattern, float damageMultiplier)
+    private void CopyLaunch(BulletLauncher launcher, PatternData pattern, float damageMultiplier, bool fromBullet)
     {
         float angleStep = pattern.Spread / pattern.Count;
         float aimAngle = pattern.FixedAngle == null ? transform.rotation.eulerAngles.z + pattern.AngleOffset : (float)pattern.FixedAngle + pattern.AngleOffset;

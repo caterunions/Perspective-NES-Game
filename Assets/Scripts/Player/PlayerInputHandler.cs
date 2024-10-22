@@ -74,7 +74,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void HandleAim(InputAction.CallbackContext ctx)
     {
-        _playerAim.HandleAim(_camera.ScreenToWorldPoint(ctx.ReadValue<Vector2>()));
+        _playerAim.HandleAim(ctx.ReadValue<Vector2>());
     }
 
     private void BeginFire(InputAction.CallbackContext ctx) 

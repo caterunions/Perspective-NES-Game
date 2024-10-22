@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     private PlayerStats _stats;
 
     private Vector2 _lastMoveInput;
+    public Vector2 LastMoveInput => _lastMoveInput;
 
     public void HandleMove(Vector2 moveInfo)
     {

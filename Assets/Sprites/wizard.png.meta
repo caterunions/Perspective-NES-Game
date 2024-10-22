@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 264
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,11 +101,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5480433, y: 0.29044455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: wizard_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 500
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.6222922, y: 0.3014738}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: wizard_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1000
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5524109, y: 0.26011416}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: wizard_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1499
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.57861644, y: 0.3014738}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: wizard_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2000
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.6135571, y: 0.3097457}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,27 +197,6 @@ TextureImporter:
       bones: []
       spriteID: cfc626f075552c643ae9b688b7e16233
       internalID: 1658427831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea42a0af6b269b04ca856a31342be139
-      internalID: 1144704671
       vertices: []
       indices: 
       edges: []
@@ -238,9 +217,6 @@ TextureImporter:
       wizard_2: -1568001961
       wizard_3: -359769066
       wizard_4: 1658427831
-      wizard_5: 1144704671
-      wizard_6: 1253840031
-      wizard_7: -1653054873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

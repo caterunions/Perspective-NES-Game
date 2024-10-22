@@ -28,7 +28,7 @@ public class DelayedSpawnBullets : BulletBehaviour
 
             for (int i = 0; i < attack.Repetitions; i++)
             {
-                bullet.Launcher.Launch(new PatternData(attack.Bullet, curCount, curSpread, curAngleOffset, attack.RandomAngleOffset, bullet.Team, bullet.transform.position, attack.StartAtFixedAngle ? attack.FixedAngle : null, bullet.CameFromEffect, bullet.PreviousEffectsInChain), bullet.DamageMultiplier);
+                bullet.Launcher.Launch(new PatternData(attack.Bullet, curCount, curSpread, curAngleOffset, attack.RandomAngleOffset, bullet.Team, bullet.transform.position, attack.StartAtFixedAngle ? attack.FixedAngle : null, bullet.CameFromEffect, bullet.PreviousEffectsInChain), bullet.DamageMultiplier, true);
 
                 curCount += attack.CountModifier;
                 curSpread += attack.SpreadModifier;

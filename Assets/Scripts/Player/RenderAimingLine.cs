@@ -9,7 +9,7 @@ public class RenderAimingLine : MonoBehaviour
 
     private Transform _cursor;
 
-    private void OnEnable()
+    private void Start()
     {
         _cursor = GameManager.Instance.Cursor;
     }

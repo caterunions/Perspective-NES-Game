@@ -13,7 +13,8 @@ public class PlayerAim : MonoBehaviour
 
     private void Update()
     {
-        Vector2 facingDirection = _lastAimInput - new Vector2(transform.position.x, transform.position.y);
+        Vector2 aim = Camera.main.ScreenToWorldPoint(_lastAimInput);
+        Vector2 facingDirection = aim - new Vector2(transform.position.x, transform.position.y);
         float angle = Mathf.Atan2(facingDirection.y, facingDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle - 90);
     }

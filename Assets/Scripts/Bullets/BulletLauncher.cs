@@ -7,9 +7,9 @@ public class BulletLauncher : MonoBehaviour
 {
     public event Action<BulletLauncher, Bullet, DamageReceiver, DamageEvent> OnSpawnedBulletHit;
     public event Action<BulletLauncher, Bullet, PatternData> OnBulletLaunch;
-    public event Action<BulletLauncher, PatternData, float> OnPatternLaunch;
+    public event Action<BulletLauncher, PatternData, float, bool> OnPatternLaunch;
 
-    public void Launch(PatternData pattern, float damageMultiplier)
+    public void Launch(PatternData pattern, float damageMultiplier, bool fromBullet = false)
     {
         float angleStep = pattern.Spread / pattern.Count;
         float aimAngle = pattern.FixedAngle == null ? transform.rotation.eulerAngles.z + pattern.AngleOffset : (float)pattern.FixedAngle + pattern.AngleOffset;
@@ -32,7 +32,7 @@ public class BulletLauncher : MonoBehaviour
             b.Initialize(transform.root.gameObject, this, pattern.Team, pattern.CameFromEffect, pattern.PreviousEffectsInChain, damageMultiplier);
             OnBulletLaunch?.Invoke(this, b, pattern);
         }
-        OnPatternLaunch?.Invoke(this, pattern, damageMultiplier);
+        OnPatternLaunch?.Invoke(this, pattern, damageMultiplier, fromBullet);
     }
 
     private void TriggerSpawnedHitEvent(Bullet bullet, DamageReceiver dr, DamageEvent dmgEvent)

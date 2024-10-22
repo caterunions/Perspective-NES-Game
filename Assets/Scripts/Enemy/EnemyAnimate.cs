@@ -58,7 +58,7 @@ public class EnemyAnimate : MonoBehaviour
         _launcher.OnPatternLaunch -= PerformAttackAnimation;
     }
 
-    private void PerformAttackAnimation(BulletLauncher launcher, PatternData pattern, float damageMultiplier)
+    private void PerformAttackAnimation(BulletLauncher launcher, PatternData pattern, float damageMultiplier, bool fromBullet)
     {
         _animationRoutine = StartCoroutine(AttackRoutine());
     }

@@ -17,18 +17,18 @@ MonoBehaviour:
 
     <color=#fffa96>
 
-    +10
+    +30
     Armor
 
     +25 Max Health
 
-    <color=#ffc9c9>-10% Move Speed'
+    <color=#ffc9c9>-15% Move Speed'
   _rarity: 0
   _statBoosts:
   - _statIncrease: 4
     _type: 0
     _source: 0
-    _statIncreaseAmount: 10
+    _statIncreaseAmount: 30
   - _statIncrease: 0
     _type: 0
     _source: 0
@@ -36,5 +36,5 @@ MonoBehaviour:
   - _statIncrease: 5
     _type: 1
     _source: 0
-    _statIncreaseAmount: -0.1
+    _statIncreaseAmount: -0.15
   _trinketEffects: []

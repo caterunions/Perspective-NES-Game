@@ -17,12 +17,12 @@ MonoBehaviour:
 
     <color=#fffa96>
 
-    +1.5
+    +2
     Health Regen'
   _rarity: 0
   _statBoosts:
   - _statIncrease: 1
     _type: 0
     _source: 0
-    _statIncreaseAmount: 1.5
+    _statIncreaseAmount: 2
   _trinketEffects: []

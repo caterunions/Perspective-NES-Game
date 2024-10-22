@@ -20,11 +20,11 @@ MonoBehaviour:
   - _trinket: {fileID: 11400000, guid: cafe597895218a5408e6a87ede31bbf3, type: 2}
     _weight: 10
   - _trinket: {fileID: 11400000, guid: 6eeb0c69cef99e74b86327c6e275d839, type: 2}
-    _weight: 10
+    _weight: 15
   - _trinket: {fileID: 11400000, guid: 4912d66772ff3264ba525388f8227cfc, type: 2}
-    _weight: 10
+    _weight: 15
   - _trinket: {fileID: 11400000, guid: de321bd44d4dbf5489e0781bc784aa75, type: 2}
-    _weight: 10
+    _weight: 15
   - _trinket: {fileID: 11400000, guid: 30613054aa43bbb42935d35c98b329a7, type: 2}
     _weight: 10
   - _trinket: {fileID: 11400000, guid: 9a59efe622662454197cef4ef77d313f, type: 2}

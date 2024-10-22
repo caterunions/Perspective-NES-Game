@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 // unity's ui system
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]
-    private int _playScene;
+    //[SerializeField]
+    //private int _playScene;
     [SerializeField]
     private GameObject _titleScreen;
     [SerializeField]
@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(_playScene, LoadSceneMode.Single);
+        SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);
     }
     public void QuitGame()
     {

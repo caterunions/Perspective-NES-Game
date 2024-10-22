@@ -608,7 +608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1643851709}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   _titleText: {fileID: 15303055}
   _bodyText: {fileID: 1124604114}
   _gameplayImg: {fileID: 0}
-  _maxindex: 3
+  _maxindex: 4
 --- !u!1 &1517918638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,7 +1955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b72354d69282846bae81b19828c37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playScene: 0
   _titleScreen: {fileID: 1868828950}
   _controlsMenu: {fileID: 1469470739}
 --- !u!1 &1836753640
@@ -2041,7 +2040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1643851709}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1

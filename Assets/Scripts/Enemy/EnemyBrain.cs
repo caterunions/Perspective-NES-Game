@@ -27,6 +27,9 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField]
     private EnemyMove _mover;
 
+    [SerializeField]
+    private bool _lockAimerWhenActing = false;
+
     private EnemyAction _curAction;
     private int _actionIndex = 0;
 
@@ -71,6 +74,9 @@ public class EnemyBrain : MonoBehaviour
 
     private void Update()
     {
+        if (_lockAimerWhenActing && Acting) _aimer.Locked = true;
+        else _aimer.Locked = false;
+
         if (_curAction.InProgress == false && _canAct)
         {
             if (_curAction != _actions[_actionIndex] && !_actions[_actionIndex].InProgress)

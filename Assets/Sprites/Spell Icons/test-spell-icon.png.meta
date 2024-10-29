@@ -252,7 +252,7 @@ TextureImporter:
         width: 99
         height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,6 +260,69 @@ TextureImporter:
       bones: []
       spriteID: fe0ff34dbf24f294299160972335cd37
       internalID: -1724156720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 245
+        width: 261
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f74ec82f73fe748baf727aab3ef6b9
+      internalID: -110789443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_9
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 246
+        width: 265
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1637cd72fb6d664386d36d7bfbf914b
+      internalID: 1899985980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_10
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 245
+        width: 265
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56d79dc598dc78419abc819210a4818
+      internalID: -1537134629
       vertices: []
       indices: 
       edges: []
@@ -277,12 +340,15 @@ TextureImporter:
     nameFileIdTable:
       test-spell-icon_0: 526793833
       test-spell-icon_1: 226830147
+      test-spell-icon_10: -1537134629
       test-spell-icon_2: -1175810401
       test-spell-icon_3: -274658787
       test-spell-icon_4: 1811897982
       test-spell-icon_5: 2024605087
       test-spell-icon_6: -524762067
       test-spell-icon_7: -1724156720
+      test-spell-icon_8: -110789443
+      test-spell-icon_9: 1899985980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

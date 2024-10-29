@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a326f04852f2b4b8566c1f6b5009da, type: 3}
   m_Name: Ice Shard
   m_EditorClassIdentifier: 
-  _icon: {fileID: -1724156720, guid: 352bee46fbdc69c4b940d8c2ec05eb4e, type: 3}
+  _icon: {fileID: 1899985980, guid: 352bee46fbdc69c4b940d8c2ec05eb4e, type: 3}
   _description: '<size=20><color=#42D0FF>Ice Shard</color></size>
 
 

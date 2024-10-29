@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 10f1d6e6082723846b22e15df50f3b89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 264
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemy_wizard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5556626, y: 0.26656595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b435bac86ceba5b44bdc3eacb1a79a38
+      internalID: -1815590570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 792
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.6192769, y: 0.25652584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98e88ae92619e14281ef6f88a9e77c3
+      internalID: -812617551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 792
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.53777075, y: 0.24397555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3daad4b1c66ea4baf002405db88803
+      internalID: -37596056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 792
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.56361425, y: 0.24146555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f73b296cca540439a654bf7fc8490d
+      internalID: -1353129058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 792
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.61329395, y: 0.3063877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf80e1af5b1209046a9687b4c5efd53a
+      internalID: -708800005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.551633, y: 0.25908107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cf3f04a8ba85345ae3bf9c4ec56102
+      internalID: 629014279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 396
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.62524074, y: 0.261546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45efaaccbdecb642ba8bacad9014b35
+      internalID: 578833818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_7
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 396
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.53379494, y: 0.25401583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad6d96573c97840bcc7d510534aeb9
+      internalID: 1075646427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_8
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 396
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5835203, y: 0.28153583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53dca1b2b189b048871655ab6c8e88f
+      internalID: 2108381360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 396
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.6172978, y: 0.31638283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097c949c31641784eaf35c934a23a519
+      internalID: -138313839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5573912, y: 0.24262854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102ee6d865fda0d4c84f14e3eb75b92e
+      internalID: -649100343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.61874074, y: 0.33258358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34333ba201f2b274f9a5e3d899db0203
+      internalID: 1022086685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_12
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.4663567, y: 0.2751123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcaa3a267622b744d8ed79497036f6b8
+      internalID: 1362162680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_13
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.5692651, y: 0.3100948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d48a6b0d72a1442bbe87d1445b0e99
+      internalID: -1804495962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wizard_14
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 500
+        height: 396
+      alignment: 9
+      pivot: {x: 0.62071925, y: 0.30759606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773d59ab8a9770b4a9dbae9385e727a1
+      internalID: 1991464417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      enemy_wizard_0: -1815590570
+      enemy_wizard_1: -812617551
+      enemy_wizard_10: -649100343
+      enemy_wizard_11: 1022086685
+      enemy_wizard_12: 1362162680
+      enemy_wizard_13: -1804495962
+      enemy_wizard_14: 1991464417
+      enemy_wizard_2: -37596056
+      enemy_wizard_3: -1353129058
+      enemy_wizard_4: -708800005
+      enemy_wizard_5: 629014279
+      enemy_wizard_6: 578833818
+      enemy_wizard_7: 1075646427
+      enemy_wizard_8: 2108381360
+      enemy_wizard_9: -138313839
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4487cd5b4e941748bc1ecdd147e17c1, type: 3}
-  m_Name: Fire Spell Summon
+  m_Name: Ice Wisp Summon
   m_EditorClassIdentifier: 
-  _summon: {fileID: 4426772657685719354, guid: 80d108263c44c854d9ad4f7c7c2fef85, type: 3}
+  _summon: {fileID: 4426772657685719354, guid: 38f8b6149ce30d9439140d7cfd23b02c, type: 3}

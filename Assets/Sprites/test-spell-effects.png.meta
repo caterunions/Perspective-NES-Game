@@ -315,7 +315,7 @@ TextureImporter:
         width: 99
         height: 156
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +336,7 @@ TextureImporter:
         width: 95
         height: 141
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,6 +344,27 @@ TextureImporter:
       bones: []
       spriteID: aac3a194d2400d946a00a96da414a847
       internalID: 206816747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-effects_12
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 0
+        width: 232
+        height: 217
+      alignment: 9
+      pivot: {x: 0.49440792, y: 0.45615658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c212f20571c0eb841b24503dd8003b52
+      internalID: -574737653
       vertices: []
       indices: 
       edges: []
@@ -363,6 +384,7 @@ TextureImporter:
       test-spell-effects_1: 2024180963
       test-spell-effects_10: -344713958
       test-spell-effects_11: 206816747
+      test-spell-effects_12: -574737653
       test-spell-effects_2: -1839575196
       test-spell-effects_3: 530567026
       test-spell-effects_4: -99614240

@@ -535,7 +535,7 @@ MonoBehaviour:
   _castingHandler: {fileID: 1091297292591825541}
   _startingSpells:
   - {fileID: 11400000, guid: 64a9e0efef3d86f478ad714ec93a12ae, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ff2a40a893661b04295e6b5fc9464f64, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

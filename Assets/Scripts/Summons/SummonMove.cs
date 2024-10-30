@@ -34,6 +34,9 @@ public class SummonMove : MonoBehaviour
         }
     }
 
+    private Vector2 _lastMoveDir;
+    public Vector2 LastMoveDir => _lastMoveDir;
+
     private void FixedUpdate()
     {
         Vector2? moveDir = null;
@@ -54,6 +57,7 @@ public class SummonMove : MonoBehaviour
         }
         else
         {
+            _lastMoveDir = moveDir.Value;
             _rb.velocity = moveDir.Value.normalized * _moveSpeed;
         }
     }

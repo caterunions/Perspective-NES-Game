@@ -273,7 +273,7 @@ TextureImporter:
         width: 261
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +294,7 @@ TextureImporter:
         width: 265
         height: 263
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +315,7 @@ TextureImporter:
         width: 265
         height: 263
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,6 +323,27 @@ TextureImporter:
       bones: []
       spriteID: d56d79dc598dc78419abc819210a4818
       internalID: -1537134629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 50
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0a2569daa82a747811594240ca2d9e
+      internalID: -1951789558
       vertices: []
       indices: 
       edges: []
@@ -341,6 +362,7 @@ TextureImporter:
       test-spell-icon_0: 526793833
       test-spell-icon_1: 226830147
       test-spell-icon_10: -1537134629
+      test-spell-icon_11: -1951789558
       test-spell-icon_2: -1175810401
       test-spell-icon_3: -274658787
       test-spell-icon_4: 1811897982

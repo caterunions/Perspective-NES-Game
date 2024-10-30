@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 826484786587837382}
   - component: {fileID: 7163168430147903806}
   - component: {fileID: 8714254849276479317}
-  - component: {fileID: 3152900145057474119}
   m_Layer: 0
   m_Name: TestSlowBullet
   m_TagString: Untagged
@@ -123,7 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviours:
   - {fileID: 8714254849276479317}
-  - {fileID: 3152900145057474119}
   _solidObjectPierceCount: 0
   _range: 15
   _collider: {fileID: 826484786587837382}
@@ -145,20 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocity: 10
---- !u!114 &3152900145057474119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958109475525925928}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6938bc98da2f2ca48bf3a3f0dba3ae70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _statusEffectData: {fileID: 11400000, guid: 12267d7b279d310418473c476da4c2ea, type: 2}
-  _duration: 2
 --- !u!1 &2552077596774974351
 GameObject:
   m_ObjectHideFlags: 0

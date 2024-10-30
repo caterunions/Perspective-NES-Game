@@ -26,8 +26,10 @@ public class Summon : MonoBehaviour
 
     [SerializeField]
     private float _lifetime;
+    public float Lifetime => _lifetime;
 
     private float _lifetimeEnd;
+    public float LifetimeEnd => _lifetimeEnd;
 
     [SerializeField]
     private List<SummonAction> _actions;

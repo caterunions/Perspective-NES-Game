@@ -5194,6 +5194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mover: {fileID: 1885315216056564837}
   _spriteRenderer: {fileID: 5419948263141197751}
+  _summon: {fileID: 4426772657685719354}
 --- !u!1 &8656895681543549010
 GameObject:
   m_ObjectHideFlags: 0

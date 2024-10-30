@@ -5011,7 +5011,7 @@ MonoBehaviour:
   _range: 8
   _collider: {fileID: 6292511271495921943}
   _destroyOnWalls: 1
-  _damage: 10
+  _damage: 12
   _damageType: 2
   _procCoefficient: 1
   _armorPiercing: 0

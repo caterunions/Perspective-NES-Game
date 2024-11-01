@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisplayWaveInfo : MonoBehaviour
 {
@@ -11,8 +12,12 @@ public class DisplayWaveInfo : MonoBehaviour
     [SerializeField]
     private EnemySpawner _spawner;
 
+    [SerializeField]
+    private Image _waveProgressBar;
+
     private void Update()
     {
-        _waveText.text = $"Wave {_spawner.CurrentWave}\nEnemies Remaining: {_spawner.RemainingEnemies}";
+        _waveText.text = $"Wave {_spawner.CurrentWave}/{_spawner.TotalWaves}";
+        if(_spawner.TotalWaveEnemies > 0) _waveProgressBar.fillAmount = (float)_spawner.RemainingEnemies / (float)_spawner.TotalWaveEnemies;
     }
 }

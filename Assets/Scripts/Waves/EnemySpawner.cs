@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField]
     private List<EnemyWave> _waves;
+    public int TotalWaves => _waves.Count;
 
     private List<EnemyBrain> _aliveEnemies = new List<EnemyBrain>();
 

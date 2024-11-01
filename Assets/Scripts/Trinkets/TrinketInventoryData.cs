@@ -7,6 +7,7 @@ using UnityEngine;
 public class TrinketInventoryData : ScriptableObject
 {
     public event Action<TrinketInventoryData, List<Trinket>> OnTrinketsChange;
+    public event Action<TrinketInventoryData, Trinket> OnTrinketAdd;
 
     [SerializeField]
     private List<Trinket> _trinkets;
@@ -16,6 +17,7 @@ public class TrinketInventoryData : ScriptableObject
     {
         List<Trinket> _oldTrinkets = new List<Trinket>(_trinkets);
         _trinkets.Add(trinket);
+        OnTrinketAdd?.Invoke(this, trinket);
         OnTrinketsChange?.Invoke(this, _oldTrinkets);
     }
 

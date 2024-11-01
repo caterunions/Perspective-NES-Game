@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 4101325117751298239}
   - component: {fileID: 1431865957742197303}
   - component: {fileID: 2789249097309524715}
+  - component: {fileID: 5341373621132123025}
   m_Layer: 6
   m_Name: Assassin Weak
   m_TagString: Untagged
@@ -238,6 +239,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   _aimer: {fileID: 5620176225761123948}
   _mover: {fileID: 640104761600537122}
+  _lockAimerWhenActing: 0
 --- !u!114 &640104761600537122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +391,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stats: {fileID: 8647825259397098311}
   _healthDamageReceiver: {fileID: 989103372972544303}
+--- !u!114 &5341373621132123025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253615195341163744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56d4beab3383e84b938cf745241107d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystem: {fileID: 7506446545772431717, guid: 427ac62a2c2d4ba438e8dbd4ef48941a, type: 3}
 --- !u!1 &7508451367471656583
 GameObject:
   m_ObjectHideFlags: 0

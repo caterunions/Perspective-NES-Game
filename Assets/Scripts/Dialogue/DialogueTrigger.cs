@@ -9,14 +9,15 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField]
     private bool _dialogueOnStart;
     [SerializeField]
-    private DialogueManager _dialogueManager;
+    private GameObject _dialogueManager;
 
     private bool _dialogueIsPlaying = false;
+
     private void Update ()
     {
         if (_dialogueOnStart && !_dialogueIsPlaying)
         {
-            _dialogueManager.StartDialogue(_dialogue);
+            _dialogueManager.GetComponent<DialogueManager>().StartDialogue(_dialogue);
             _dialogueIsPlaying = true;
         }
     }

@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.IO;
-// v temporary. only for playtest v
-using UnityEngine.SceneManagement;
 
 // this script will be in charge of:
 // 1. splitting the .txt file into a string array
@@ -20,13 +17,15 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI _displayText;
     [SerializeField]
     private GameObject _continueIcon; // displays once line is completed
+    [SerializeField]
+    private Animator _animator;
 
     private TextAsset _currentDialogue;
     private Coroutine _displayLineCo;
     private string[] _allLines;
     private int _currentLine; // line in text file
     private bool _canContinueDia = false;
-    private bool _dialogueIsPlaying = false;
+    public bool _dialogueIsPlaying = false;
    
     [Header("Typing Speed")]
     [SerializeField]
@@ -89,6 +88,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(TextAsset _textDoc)
     {
+        _animator.Play("DP-EnterDialogue");
         _currentLine = 0;
         _currentTypingSpeed = _typingSpeed;
         _currentDialogue = new TextAsset(_textDoc.text);
@@ -111,12 +111,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogue()
     {
+        _animator.Play("DP-ExitDialogue");
         yield return new WaitForSeconds(0.2f);
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _displayText.text = "";
-        // v temporary. only for playtest v
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
     private void ContinueDialogue()

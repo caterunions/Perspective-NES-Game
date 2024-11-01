@@ -369,6 +369,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: test-spell-effects_13
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 3
+        width: 178
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fa455394b17984ca61eebfa8404ccd
+      internalID: 1293934782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -385,6 +406,7 @@ TextureImporter:
       test-spell-effects_10: -344713958
       test-spell-effects_11: 206816747
       test-spell-effects_12: -574737653
+      test-spell-effects_13: 1293934782
       test-spell-effects_2: -1839575196
       test-spell-effects_3: 530567026
       test-spell-effects_4: -99614240

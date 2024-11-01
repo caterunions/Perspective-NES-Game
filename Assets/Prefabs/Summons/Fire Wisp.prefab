@@ -5008,8 +5008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 4730860314844472587}
-  _minAcceptableDistance: 1.5
-  _maxAcceptableDistance: 2
+  _minAcceptableDistance: 2
+  _maxAcceptableDistance: 3.5
   _moveSpeed: 5
 --- !u!50 &4730860314844472587
 Rigidbody2D:

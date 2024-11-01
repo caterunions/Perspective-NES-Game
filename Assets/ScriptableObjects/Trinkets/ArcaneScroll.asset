@@ -20,14 +20,20 @@ MonoBehaviour:
     +10%
     Arcane Damage
 
-    +10% Attack Speed'
+    +10% Summon Lifetime
+
+    +10% Summon Attack Speed'
   _rarity: 0
   _statBoosts:
   - _statIncrease: 6
     _type: 0
     _source: 0
     _statIncreaseAmount: 0.1
-  - _statIncrease: 3
+  - _statIncrease: 14
+    _type: 0
+    _source: 0
+    _statIncreaseAmount: 0.1
+  - _statIncrease: 15
     _type: 0
     _source: 0
     _statIncreaseAmount: 0.1

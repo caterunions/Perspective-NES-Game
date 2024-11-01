@@ -1633,7 +1633,7 @@ MonoBehaviour:
   _trinketInv: {fileID: 11400000, guid: ae0c07748cbf03f47be94b63c37e23cf, type: 2}
   _spellInv: {fileID: 11400000, guid: 4a226cb31eafb044eb27876bbd45fe0e, type: 2}
   _trinketRewardList:
-  - _waveNumber: 1
+  - _waveNumber: 3
     _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
     _optionsCount: 2
   - _waveNumber: 2
@@ -1646,10 +1646,13 @@ MonoBehaviour:
     _rewardTable: {fileID: 11400000, guid: 5b4f2b020b9ea124dac9de084a5d100b, type: 2}
     _optionsCount: 6
   _spellRewardList:
-  - _waveNumber: 3
+  - _waveNumber: 1
     _rewardSpells:
     - {fileID: 11400000, guid: a4bae0e86ca95f34dbd5f42e6befcdc6, type: 2}
     - {fileID: 11400000, guid: b58c693bcbfc90a4c9ca50404dcd561a, type: 2}
+    - {fileID: 11400000, guid: aefc275870a079f4ea3a513a65ba9b5e, type: 2}
+    - {fileID: 11400000, guid: ff2a40a893661b04295e6b5fc9464f64, type: 2}
+    - {fileID: 11400000, guid: 6ebcfac12b386b1488f7020550c9cc64, type: 2}
     _rewardTable: {fileID: 11400000, guid: 7f2a5a6255ed538468073d91904b0b91, type: 2}
     _optionsCount: 2
   - _waveNumber: 5
@@ -1954,7 +1957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wave Rewards!
+  m_text: Choose Your Reward
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74254a614c561ef429a1777184c932f5, type: 2}
   m_sharedMaterial: {fileID: 1678671095181912415, guid: 74254a614c561ef429a1777184c932f5, type: 2}

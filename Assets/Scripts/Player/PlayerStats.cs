@@ -48,7 +48,7 @@ public class PlayerStats : EntityStats
         if (mana < 0) return;
 
         _currentMana += mana;
-        if(_currentMana > _maxMana) _currentMana = _maxMana;
+        if(_currentMana > MaxMana) _currentMana = MaxMana;
 
         OnManaChange?.Invoke(this, mana);
     }

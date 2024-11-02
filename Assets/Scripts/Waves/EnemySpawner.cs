@@ -83,7 +83,7 @@ public class EnemySpawner : MonoBehaviour
                 _waveIndex++;
             }
         }
-        if(_waveIndex >= _waves.Count && _endRoutine == null)
+        if(_remainingEnemies == 0 && _waveIndex >= _waves.Count && _endRoutine == null)
         {
             _endRoutine = StartCoroutine(EndRoutine());
         }

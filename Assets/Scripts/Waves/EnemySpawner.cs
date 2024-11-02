@@ -71,7 +71,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_allowedToStart);
         if(_allowedToStart && _remainingEnemies == 0 && _waveIndex < _waves.Count)
         {
             if (_waveIndex > 0) OnWaveComplete?.Invoke(this, _waveIndex);

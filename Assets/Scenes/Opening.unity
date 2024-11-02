@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 571928345}
   - component: {fileID: 571928344}
   m_Layer: 5
-  m_Name: BG (delete later)
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 659329475}
   - component: {fileID: 659329477}
   m_Layer: 5
-  m_Name: Dialogue Panel
+  m_Name: DialoguePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1167,7 +1167,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1968911675}
   - component: {fileID: 1968911676}
-  - component: {fileID: 1968911677}
   - component: {fileID: 1968911678}
   m_Layer: 0
   m_Name: Timeline
@@ -1215,23 +1214,17 @@ PlayableDirector:
     value: {fileID: 104566627}
   - key: {fileID: 4367367431335925306, guid: c5cb425f1c77e9643b161068a80866b3, type: 2}
     value: {fileID: 730099722}
+  - key: {fileID: 1419656263088943945, guid: c5cb425f1c77e9643b161068a80866b3, type: 2}
+    value: {fileID: 2086947092}
+  - key: {fileID: -7371586119544461690, guid: c5cb425f1c77e9643b161068a80866b3, type: 2}
+    value: {fileID: 889672240}
   m_ExposedReferences:
     m_References:
+    - 1076b4a33348dae4db1645b6ee47167e: {fileID: 2086947092}
+    - 0133f78220b0e9044aebe55e786bc030: {fileID: 889672240}
     - e358da3eba76ea7419ba8e562e4accf2: {fileID: 730099722}
     - 373a3fe19f63b0448a80be065236a19e: {fileID: 0}
     - 614ff008a9d6967488c4cf2ebe471c73: {fileID: 0}
---- !u!114 &1968911677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968911674}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58cab8c32aec4542aab707e2158de8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1968911678
 MonoBehaviour:
   m_ObjectHideFlags: 0

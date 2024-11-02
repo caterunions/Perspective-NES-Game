@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class DisableEnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject _enemySpawner;
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    void Awake()
     {
-        
+        //_enemySpawner.SetActive(false);
+        _enemySpawner.GetComponent<EnemySpawner>().enabled = false;
     }
 }

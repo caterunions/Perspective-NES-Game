@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.IO;
-// v temporary. only for playtest v
-using UnityEngine.SceneManagement;
 
 // this script will be in charge of:
 // 1. splitting the .txt file into a string array
@@ -20,17 +17,20 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI _displayText;
     [SerializeField]
     private GameObject _continueIcon; // displays once line is completed
+    [SerializeField]
+    private Animator _animator;
 
     private TextAsset _currentDialogue;
     private Coroutine _displayLineCo;
     private string[] _allLines;
     private int _currentLine; // line in text file
     private bool _canContinueDia = false;
-    private bool _dialogueIsPlaying = false;
+    public bool _dialogueIsPlaying = false;
    
     [Header("Typing Speed")]
     [SerializeField]
     private float _typingSpeed;
+    private float _currentTypingSpeed;
 
     private static DialogueManager instance;
 
@@ -50,6 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        _currentTypingSpeed = _typingSpeed;
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _continueIcon.SetActive(false);
@@ -62,15 +63,34 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        if (_canContinueDia && Input.GetKeyDown(KeyCode.Space) && _dialogueIsPlaying)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            ContinueDialogue();
+            CheckDialogueState();
+        }
+    }
+
+    private void CheckDialogueState()
+    {
+        if (_dialogueIsPlaying)
+        {
+            if (_canContinueDia)
+            {
+                _currentTypingSpeed = _typingSpeed;
+                ContinueDialogue();
+            }
+            else
+            {
+                // skip dialogue
+                _currentTypingSpeed = 0;
+            }
         }
     }
 
     public void StartDialogue(TextAsset _textDoc)
     {
+        _animator.Play("DP-EnterDialogue");
         _currentLine = 0;
+        _currentTypingSpeed = _typingSpeed;
         _currentDialogue = new TextAsset(_textDoc.text);
         // get dialogue lines and put it into an array
         _allLines = _currentDialogue.text.Split(">> ");
@@ -91,12 +111,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogue()
     {
+        _animator.Play("DP-ExitDialogue");
         yield return new WaitForSeconds(0.2f);
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _displayText.text = "";
-        // v temporary. only for playtest v
-        SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);
     }
 
     private void ContinueDialogue()
@@ -128,7 +147,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in _allLines[_currentLine].ToCharArray())
         {
             _displayText.text += letter;
-            yield return new WaitForSeconds(_typingSpeed);
+            yield return new WaitForSeconds(_currentTypingSpeed);
         }
         _continueIcon.SetActive(true);
         // dialogue can continue

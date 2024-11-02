@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private HealthPool _playerHP;
 
+    [SerializeField]
+    private GameObject _gameOver;
+
     private void Awake()
     {
         Instance = this;
@@ -22,6 +25,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         _playerHP.OnHPChange += MonitorGameOver;
+        _gameOver.SetActive(false);
     }
 
     private void OnDisable()
@@ -31,6 +35,15 @@ public class GameManager : MonoBehaviour
 
     private void MonitorGameOver(HealthPool pool, float change)
     {
-        if (_playerHP.Health <= 0) SceneManager.LoadScene("MainMenu");
+        if (_playerHP.Health <= 0)
+        {
+            _playerHP.transform.root.gameObject.SetActive(false);
+            _gameOver.SetActive(true);
+        }
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

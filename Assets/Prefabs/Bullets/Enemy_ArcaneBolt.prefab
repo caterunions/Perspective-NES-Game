@@ -134,8 +134,8 @@ MonoBehaviour:
   _solidObjectPierceCount: 0
   _range: 9999
   _collider: {fileID: 826484786587837382}
-  _destroyOnWalls: 1
-  _damage: 15
+  _destroyOnWalls: 0
+  _damage: 20
   _damageType: 0
   _procCoefficient: 1
   _armorPiercing: 0
@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startVelocity: 0
-  _endVelocity: 5
-  _rampTime: 0.5
+  _endVelocity: 8
+  _rampTime: 2
 --- !u!114 &8277324994074924146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7458a5db713333c4795d1fadb25dcb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxTurnDegrees: 1.5
+  _maxTurnDegrees: 2
 --- !u!114 &1455506690361384723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5ee3720afb16c418a2bc207c584db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lifetime: 5
+  _lifetime: 7
 --- !u!1 &2201510786074510306
 GameObject:
   m_ObjectHideFlags: 0

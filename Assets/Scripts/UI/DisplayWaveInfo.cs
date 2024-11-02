@@ -18,6 +18,6 @@ public class DisplayWaveInfo : MonoBehaviour
     private void Update()
     {
         _waveText.text = $"Wave {_spawner.CurrentWave}/{_spawner.TotalWaves}";
-        if(_spawner.TotalWaveEnemies > 0) _waveProgressBar.fillAmount = (float)_spawner.RemainingEnemies / (float)_spawner.TotalWaveEnemies;
+        if(_spawner.TotalWaveEnemies > 0) _waveProgressBar.fillAmount = 1 - (float)_spawner.RemainingEnemies / (float)_spawner.TotalWaveEnemies;
     }
 }

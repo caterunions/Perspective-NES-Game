@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34771d084d1636d46bd9b75ded2c0ebf, type: 3}
+  m_Name: BasicTrinkets
+  m_EditorClassIdentifier: 
+  _weightedTrinkets:
+  - _trinket: {fileID: 11400000, guid: 6eeb0c69cef99e74b86327c6e275d839, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 7252d4889585bbb418b8eb63b04aa346, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 30613054aa43bbb42935d35c98b329a7, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: 4912d66772ff3264ba525388f8227cfc, type: 2}
+    _weight: 10
+  - _trinket: {fileID: 11400000, guid: de321bd44d4dbf5489e0781bc784aa75, type: 2}
+    _weight: 10

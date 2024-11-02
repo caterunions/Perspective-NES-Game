@@ -336,7 +336,7 @@ TextureImporter:
         width: 99
         height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,6 +344,69 @@ TextureImporter:
       bones: []
       spriteID: 8c0a2569daa82a747811594240ca2d9e
       internalID: -1951789558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_12
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 240
+        width: 265
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69e72a470f33d2468673aafb051bd54
+      internalID: 468811284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_13
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 240
+        width: 266
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d935be1df829fc845931c6593e233d08
+      internalID: 318490764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-spell-icon_14
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 240
+        width: 268
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e7daa42f3cb2340b426d5706675b6a
+      internalID: 439026498
       vertices: []
       indices: 
       edges: []
@@ -363,6 +426,9 @@ TextureImporter:
       test-spell-icon_1: 226830147
       test-spell-icon_10: -1537134629
       test-spell-icon_11: -1951789558
+      test-spell-icon_12: 468811284
+      test-spell-icon_13: 318490764
+      test-spell-icon_14: 439026498
       test-spell-icon_2: -1175810401
       test-spell-icon_3: -274658787
       test-spell-icon_4: 1811897982

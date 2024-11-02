@@ -8,6 +8,8 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D _rb;
     [SerializeField]
     private PlayerStats _stats;
+    [SerializeField]
+    private AudioSource _moveSound;
 
     private Vector2 _lastMoveInput;
     public Vector2 LastMoveInput => _lastMoveInput;
@@ -15,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     public void HandleMove(Vector2 moveInfo)
     {
         _lastMoveInput = moveInfo;
+        _moveSound.enabled = true;
     }
 
     private void Update()
@@ -26,5 +29,6 @@ public class PlayerMove : MonoBehaviour
     {
         _lastMoveInput = Vector2.zero;
         _rb.velocity = Vector2.zero;
+        _moveSound.enabled = false;
     }
 }

@@ -44,6 +44,11 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private DialogueManager _dialogueManager;
+
+    private bool _allowedToStart = false;
+
     public void SpawnEnemy(EnemyBrain enemy, Vector2 position)
     {
         EnemyBrain e = Instantiate(enemy, position, Quaternion.identity);
@@ -66,7 +71,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if(_remainingEnemies == 0 && _waveIndex < _waves.Count)
+        Debug.Log(_allowedToStart);
+        if(_allowedToStart && _remainingEnemies == 0 && _waveIndex < _waves.Count)
         {
             if (_waveIndex > 0) OnWaveComplete?.Invoke(this, _waveIndex);
 
@@ -76,6 +82,21 @@ public class EnemySpawner : MonoBehaviour
                 _waveIndex++;
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        _dialogueManager.OnDialogueEnd += StartWave;
+    }
+
+    private void OnDisable()
+    {
+        _dialogueManager.OnDialogueEnd -= StartWave;
+    }
+
+    private void StartWave(DialogueManager dm)
+    {
+        _allowedToStart = true;
     }
 
     private void DestroyEnemy(EnemyBrain enemy)

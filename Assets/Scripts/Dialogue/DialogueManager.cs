@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 // this script will be in charge of:
 // 1. splitting the .txt file into a string array
@@ -10,6 +11,8 @@ using TMPro;
 // 3. player input for continuing or exiting dialogue
 public class DialogueManager : MonoBehaviour
 {
+    public event Action<DialogueManager> OnDialogueEnd;
+
     [Header("Dialogue UI")]
     [SerializeField]
     private GameObject _dialoguePanel;
@@ -116,6 +119,8 @@ public class DialogueManager : MonoBehaviour
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _displayText.text = "";
+
+        OnDialogueEnd?.Invoke(this);
     }
 
     private void ContinueDialogue()

@@ -35,6 +35,10 @@ public class DialogueManager : MonoBehaviour
     private float _typingSpeed;
     private float _currentTypingSpeed;
 
+    [Header("Sound")]
+    [SerializeField]
+    private AudioSource _continueSound;
+
     private static DialogueManager instance;
 
     private void Awake()
@@ -58,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         _dialoguePanel.SetActive(false);
         _continueIcon.SetActive(false);
         _displayText.text = string.Empty;
+        _continueSound.enabled = false;
     }
 
     private void Update()
@@ -78,6 +83,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (_canContinueDia)
             {
+                _continueSound.enabled = true;
                 _currentTypingSpeed = _typingSpeed;
                 ContinueDialogue();
             }
@@ -154,6 +160,7 @@ public class DialogueManager : MonoBehaviour
             _displayText.text += letter;
             yield return new WaitForSeconds(_currentTypingSpeed);
         }
+        _continueSound.enabled = false;
         _continueIcon.SetActive(true);
         // dialogue can continue
         _canContinueDia = true;

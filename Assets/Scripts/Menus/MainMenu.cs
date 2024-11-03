@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
+        Debug.Log("frog");
         SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);
     }
     public void QuitGame()

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class EnemySpawner : MonoBehaviour
     {
         get { return _waveIndex; }
     }
+    private Coroutine _endRoutine;
 
     private bool _rewardsPending = false;
     public bool RewardsPending 
@@ -81,6 +83,16 @@ public class EnemySpawner : MonoBehaviour
                 _waveIndex++;
             }
         }
+        if(_remainingEnemies == 0 && _waveIndex >= _waves.Count && _endRoutine == null)
+        {
+            _endRoutine = StartCoroutine(EndRoutine());
+        }
+    }
+
+    private IEnumerator EndRoutine()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Ending");
     }
 
     private void OnEnable()

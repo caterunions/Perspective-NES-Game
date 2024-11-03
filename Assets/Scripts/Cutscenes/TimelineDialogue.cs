@@ -18,7 +18,7 @@ public class TimelineDialogue : MonoBehaviour
     private void Update()
     {
         CheckSpeed();
-        if (_dialogueManager._dialogueIsPlaying) _pDirector.playableGraph.GetRootPlayable(0).SetSpeed(_currentSpeed); 
+        _pDirector.playableGraph.GetRootPlayable(0).SetSpeed(_currentSpeed); 
     }
 
     private void CheckSpeed()

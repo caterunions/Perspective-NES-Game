@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RegenerationPotion
   m_EditorClassIdentifier: 
   _sprite: {fileID: -2074339840, guid: 8a1f49b68a1a78a4da72dfd054e45086, type: 3}
-  _description: '<size=20><color=#FFFFFF>Regeneration Potion</color></size>
+  _description: '<size=16><color=#FFFFFF>Regeneration Potion</color></size>
 
     <color=#fffa96>
 

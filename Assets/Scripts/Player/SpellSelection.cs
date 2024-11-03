@@ -13,6 +13,15 @@ public class SpellSelection : MonoBehaviour
     private void OnEnable()
     {
         _spellInventoryData.SelectedSpellIndex = 0;
+        StartCoroutine(AutoScroll());
+    }
+
+    private IEnumerator AutoScroll()
+    {
+        yield return new WaitForSeconds(0.1f);
+        HandleScroll(-1);
+        yield return new WaitForSeconds(0.1f);
+        HandleScroll(1);
     }
 
     public void HandleScroll(float scroll)

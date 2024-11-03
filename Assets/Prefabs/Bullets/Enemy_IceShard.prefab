@@ -126,10 +126,10 @@ MonoBehaviour:
   _behaviours:
   - {fileID: 1328368998255816887}
   _solidObjectPierceCount: 0
-  _range: 8
+  _range: 10
   _collider: {fileID: 826484786587837382}
   _destroyOnWalls: 1
-  _damage: 8
+  _damage: 14
   _damageType: 0
   _procCoefficient: 1
   _armorPiercing: 0

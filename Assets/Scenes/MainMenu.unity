@@ -3136,7 +3136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1469470740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _titleText: {fileID: 15303055}
   _bodyText: {fileID: 1124604114}
-  _gameplayImg: {fileID: 0}
+  _gameplayImg: {fileID: 1523816945}
   _maxindex: 4
 --- !u!82 &1469470744
 AudioSource:
@@ -3481,7 +3481,7 @@ Animator:
   m_GameObject: {fileID: 1523816941}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b98d775da2ab0d64984cba2c343a6708, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

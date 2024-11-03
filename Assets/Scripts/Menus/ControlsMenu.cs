@@ -49,26 +49,27 @@ public class ControlsMenu : MonoBehaviour
             case 0:
                 _titleText.text = "Movement";
                 _bodyText.text = "Use the WASD keys to move.";
-                // _gameplayImg.Play(INSERT ANIM HERE);
+                _gameplayImg.Play("Movement");
                 break;
             case 1:
                 _titleText.text = "Aiming";
                 _bodyText.text = "Use your mouse to aim your spells.";
-                // _gameplayImg.Play(INSERT ANIM HERE);
+                _gameplayImg.Play("Aiming");
                 break;
             case 2:
                 _titleText.text = "Spells";
                 _bodyText.text = "Left click to use your regular spell. Right click or press SPACE to use your special spell.";
-                // _gameplayImg.Play(INSERT ANIM HERE);
+                _gameplayImg.Play("Spells");
                 break;
             case 3:
                 _titleText.text = "Switching spells";
                 _bodyText.text = "Scroll the mouse to switch your spells.";
-                // _gameplayImg.Play(INSERT ANIM HERE);
+                _gameplayImg.Play("SwitchingSpells");
                 break;
             case 4:
                 _titleText.text = "Mana & Health";
                 _bodyText.text = "Keep an eye on your Mana and Health bars. When you cast a special spell, it will consume mana.";
+                _gameplayImg.Play("ManaHealth");
                 break;
         }
     }
